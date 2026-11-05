@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /send.php
+Sitemap: https://travelk.shop/sitemap.xml
