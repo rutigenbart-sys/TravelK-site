@@ -144,3 +144,13 @@ body.adm{padding-top:52px}body.adm .hdr{top:52px}
 html.lock .mbar{display:none}
 @media(max-width:860px){.tools{position:static}.tools .row{display:grid;grid-template-columns:1fr auto;gap:10px}.tools .pills{grid-column:1/-1;margin:0 -16px;padding:0 16px}.tools input[type=search]{grid-column:1/-1;width:100%}.tools select{width:100%}.mosaic .tag{left:10px;bottom:10px;padding:6px 10px;font-size:.74rem;border-radius:12px}.nav{padding-bottom:28px}}
 .price .pe{color:inherit;font-size:inherit;font-weight:inherit}.card .pe{display:inline-block}
+/* mobile modal fix: fits screen, no horizontal swipe */
+.modal{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;align-items:flex-start;padding:max(12px,env(safe-area-inset-top)) 12px max(12px,env(safe-area-inset-bottom))}
+.modal .panel{margin:auto;max-height:none;overflow:visible;box-sizing:border-box;max-width:min(480px,100%);padding:26px 20px 22px}
+.modal .panel h3{padding-right:44px}
+.modal .form,.modal .form .fields,.modal .form label,.modal .form .row{min-width:0;max-width:100%}
+.modal .form input,.modal .form select,.modal .form textarea{box-sizing:border-box;min-width:0;max-width:100%;width:100%}
+.modal .form input[type=date]{-webkit-appearance:none;appearance:none;display:block;min-height:50px;text-align:left}
+.modal .form input[type=date]::-webkit-date-and-time-value{text-align:left;min-width:0}
+html:has(.modal.on),body:has(.modal.on){overflow:hidden;overscroll-behavior:none}
+@media(max-width:560px){.modal .form .row{grid-template-columns:1fr 1fr}}
