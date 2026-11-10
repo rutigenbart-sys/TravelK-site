@@ -1,0 +1,28 @@
+<div id="pre" aria-hidden="true"><i class="c c1"></i><i class="c c2"></i><i class="pg"></i><div class="pi"><svg class="ps" viewBox="0 0 100 100" aria-hidden="true"><circle class="r1" cx="50" cy="50" r="58" pathLength="100"/><circle class="r2" cx="50" cy="50" r="53" pathLength="100"/><g class="pp"><path style="--i:0" d="M50 50L44.1 35.7L50.0 2.0Z" fill="#E9BE55"/><path style="--i:1" d="M50 50L50.0 2.0L55.9 35.7Z" fill="#8A6420"/><path style="--i:2" d="M50 50L55.9 35.7L74.0 26.0Z" fill="#8A6420"/><path style="--i:3" d="M50 50L74.0 26.0L64.3 44.1Z" fill="#E9BE55"/><path style="--i:4" d="M50 50L64.3 44.1L98.0 50.0Z" fill="#E9BE55"/><path style="--i:5" d="M50 50L98.0 50.0L64.3 55.9Z" fill="#8A6420"/><path style="--i:6" d="M50 50L64.3 55.9L74.0 74.0Z" fill="#8A6420"/><path style="--i:7" d="M50 50L74.0 74.0L55.9 64.3Z" fill="#E9BE55"/><path style="--i:8" d="M50 50L55.9 64.3L50.0 98.0Z" fill="#E9BE55"/><path style="--i:9" d="M50 50L50.0 98.0L44.1 64.3Z" fill="#8A6420"/><path style="--i:10" d="M50 50L44.1 64.3L26.0 74.0Z" fill="#8A6420"/><path style="--i:11" d="M50 50L26.0 74.0L35.7 55.9Z" fill="#E9BE55"/><path style="--i:12" d="M50 50L35.7 55.9L2.0 50.0Z" fill="#E9BE55"/><path style="--i:13" d="M50 50L2.0 50.0L35.7 44.1Z" fill="#8A6420"/><path style="--i:14" d="M50 50L35.7 44.1L26.0 26.0Z" fill="#8A6420"/><path style="--i:15" d="M50 50L26.0 26.0L44.1 35.7Z" fill="#E9BE55"/></g></svg><div class="pw"><span style="--j:0">T</span><span style="--j:1">r</span><span style="--j:2">a</span><span style="--j:3">v</span><span style="--j:4">e</span><span style="--j:5">l</span><span style="--j:6" class="a">&amp;</span><span style="--j:7">K</span></div><i class="pl-line"></i><div class="pt">Таиланд · Экскурсии · Трансферы</div></div><div class="pf"><div class="pn"><b id="pn">0</b><u>%</u></div><div class="pb"><i id="pbi"></i></div></div><script>(function(){var d=document.documentElement,p=document.getElementById("pre");if(!p)return;
+if(!d.classList.contains("pl")){p.parentNode.removeChild(p);return}
+var n=document.getElementById("pn"),b=document.getElementById("pbi"),t0=window.__tk0||Date.now(),rm=window.__tkrm,
+MIN=rm?700:3500,MAX=7500,loaded=0,done=0,shown=0,fin=0,finAt=0;
+function ready(){loaded=1}
+if(document.readyState==="complete")ready();else window.addEventListener("load",ready);
+function ease(x){return 1-Math.pow(1-x,3)}
+function frame(){
+ var now=Date.now(),el=now-t0,target;
+ if(!fin){
+  target=(.5-.5*Math.cos(Math.PI*Math.min(1,el/(MIN-300))))*92;
+  if(loaded&&el>=MIN-300||el>=MAX){fin=1;finAt=now}
+ }
+ if(fin){var k=Math.min(1,(now-finAt)/380);target=shown+(100-shown)*ease(k);if(k>=1&&!done){done=1;setTimeout(out,260)}}
+ shown=Math.max(shown,target);
+ var v=Math.min(100,Math.round(shown));
+ n.textContent=v;b.style.transform="scaleX("+(shown/100)+")";
+ if(!done)requestAnimationFrame(frame)
+}
+function out(){
+ d.classList.add("pl-out");
+ setTimeout(function(){d.classList.add("pl-go","pl-open");
+  setTimeout(function(){d.classList.remove("pl","pl-out","pl-go","pl-open");if(p.parentNode)p.parentNode.removeChild(p)},rm?200:1150)
+ },rm?60:460)
+}
+requestAnimationFrame(frame);
+setTimeout(function(){if(!done){fin=1;finAt=Date.now()-400}},MAX+1500)
+})();</script></div>

@@ -33,6 +33,18 @@ def jdump(o):
 
 SHELL = jl('templates/shell.json')
 
+def _rd(name):
+    with open(os.path.join(ROOT, 'templates', name), encoding='utf8') as f:
+        return f.read().strip()
+
+# Единый источник прелоадера: templates/preloader.{css,head.js,html}
+PRE_HEAD = ('<link rel="preload" href="@@B@@assets/fonts/pf-lat.woff2" as="font" type="font/woff2" crossorigin>'
+            '<style>' + _rd('preloader.css') + '</style><script>' + _rd('preloader.head.js') + '</script>')
+PRE_BODY = _rd('preloader.html')
+
+def inject_pre(s):
+    return s.replace('<!--PRE_HEAD-->', PRE_HEAD).replace('<!--PRE_BODY-->', PRE_BODY)
+
 # ---------------------------------------------------------------- data
 def load_data():
     d = {}
@@ -102,7 +114,7 @@ def page(base, active, head_html, main, qr=False, home=False):
     bottom = SHELL['body_bottom']
     if qr:
         bottom = bottom.replace('<script src="@@B@@assets/app.js', '<script src="@@B@@assets/qr.js"></script><script src="@@B@@assets/app.js', 1)
-    out = head_html + '\n' + top + main + bottom
+    out = inject_pre(head_html + '\n' + top + main + bottom)
     return out.replace(B, base)
 
 # ---------------------------------------------------------------- tours
@@ -431,7 +443,7 @@ def blog_post_page(D, p):
 # ---------------------------------------------------------------- home
 def home_page(D):
     H = D['home']
-    out = tpl('home.html')
+    out = inject_pre(tpl('home.html')).replace(B, '')
     live = {t['slug']: t for t in ordered_tours(D)}
     pop = ''
     for o in H['popular']:
@@ -440,7 +452,7 @@ def home_page(D):
             continue
         days = o.get('days', t.get('days', ''))
         small = 'от' if t.get('price_label') == 'от' else ''
-        pop += ('<a class="pc reveal" href="ekskursii/%s/"><img src="%s" alt="%s" width="720" height="540" loading=lazy decoding=async>%s<div class="in"><h3>%s</h3><div class="m"><span>%s</span>'
+        pop += ('<a class="pc reveal" href="ekskursii/%s/"><img src="%s" alt="%s" width="720" height="540" decoding=async>%s<div class="in"><h3>%s</h3><div class="m"><span>%s</span>'
                 '<span class="p"><small>%s</small>%s</span></div></div></a>') % (
             t['slug'], tour_cover(t), e(t['title']), '<span class="tagn">%s</span>' % e(o['tag']) if o.get('tag') else '', e(t['title']), e(days), small,
             pe(t['slug'], t.get('card_pk', t['prices'][0]['k']), t['prices'][0]['v']))
