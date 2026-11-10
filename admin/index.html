@@ -1,42 +1,934 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Вход для администратора | Travel&amp;K</title><meta name="description" content="Панель редактирования цен."><link rel="canonical" href="https://travelk.shop/admin/"><meta name="robots" content="noindex,nofollow">
-<meta property="og:type" content="website"><meta property="og:title" content="Вход для администратора | Travel&amp;K"><meta property="og:description" content="Панель редактирования цен."><meta property="og:url" content="https://travelk.shop/admin/"><meta property="og:image" content="https://travelk.shop/img/og-share.jpg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Travel&amp;K — экскурсии, трансферы и визы в Таиланде"><meta property="og:site_name" content="Travel&amp;K"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://travelk.shop/img/og-share.jpg"><meta property="og:locale" content="ru_RU"><meta name="theme-color" content="#07111c">
-<link rel="preload" href="../assets/fonts/onest-cyr.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../assets/fonts/pf-cyr.woff2" as="font" type="font/woff2" crossorigin><link rel="apple-touch-icon" href="../assets/apple-touch-icon.png"><style>#pre{display:none}html.pl,html.pl body{overflow:hidden}
-html.pl #pre{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#06101a;color:#f3ece0;transition:opacity .6s ease .05s,transform .8s cubic-bezier(.7,0,.2,1)}
-html.pl #pre:before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 46%,rgba(232,189,88,.14),transparent 70%),radial-gradient(120% 90% at 50% 120%,rgba(20,50,90,.55),transparent 60%)}
-html.pl-out #pre{opacity:0;transform:translateY(-4%);pointer-events:none}
-#pre .pi{position:relative;display:flex;flex-direction:column;align-items:center;gap:22px;padding:0 24px;transition:transform .8s cubic-bezier(.7,0,.2,1),opacity .5s}
-html.pl-out #pre .pi{transform:scale(1.06);opacity:0}
-#pre .ps{width:min(34vw,132px);height:auto;overflow:visible;filter:drop-shadow(0 0 34px rgba(232,189,88,.35));animation:pspin 1.9s cubic-bezier(.2,.8,.2,1) both}
-#pre .ps path{transform-box:view-box;transform-origin:50px 50px;opacity:0;animation:pfac .7s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(.12s + var(--i)*.055s)}
-#pre .pw{display:flex;font:700 clamp(2rem,8vw,2.9rem)/1 "Playfair Display",Georgia,serif;letter-spacing:-.01em}
-#pre .pw span{display:inline-block;opacity:0;transform:translateY(.5em);animation:pup .7s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(.75s + var(--j)*.06s)}
-#pre .pw .a{color:#e8bd58}
-#pre .pt{font:500 .72rem/1 Onest,system-ui,sans-serif;letter-spacing:.34em;text-transform:uppercase;color:#9aa8ba;opacity:0;animation:pfade .8s ease 1.35s both}
-#pre .pb{width:min(52vw,210px);height:2px;border-radius:2px;background:rgba(255,255,255,.12);overflow:hidden;opacity:0;animation:pfade .5s ease .9s both}
-#pre .pb i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#b98a2c,#f3d68b);transform:scaleX(0);transform-origin:0 50%;animation:pbar 1.5s cubic-bezier(.5,0,.2,1) 1s forwards}
-html.pf #pre .ps,html.pf #pre .ps path,html.pf #pre .pw span,html.pf #pre .pt,html.pf #pre .pb{animation-duration:.01s;animation-delay:0s}
-html.pf #pre .pb i{animation-duration:.3s;animation-delay:0s}
-@keyframes pspin{from{transform:rotate(-120deg) scale(.82)}to{transform:none}}
-@keyframes pfac{from{opacity:0;transform:scale(.15)}to{opacity:1;transform:scale(1)}}
-@keyframes pup{to{opacity:1;transform:none}}
-@keyframes pfade{to{opacity:1}}
-@keyframes pbar{to{transform:scaleX(1)}}
-@media(prefers-reduced-motion:reduce){#pre .ps,#pre .ps path,#pre .pw span,#pre .pt,#pre .pb{animation-duration:.01s!important;animation-delay:0s!important}}</style><script>(function(){var d=document.documentElement,f=0;try{f=sessionStorage.getItem("tkp")?1:0;sessionStorage.setItem("tkp","1")}catch(e){}d.classList.add("pl");if(f)d.classList.add("pf");var t=Date.now(),m=f?320:2000,x=0;function h(){if(x)return;x=1;setTimeout(function(){d.classList.add("pl-out");setTimeout(function(){d.classList.remove("pl","pl-out","pf")},750)},Math.max(0,m-(Date.now()-t)))}window.addEventListener("load",h);setTimeout(h,5000)})();</script><link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css?v=20261110"><!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=114134765','ym');
-ym(114134765,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Админка Travel&K</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f4f6f8;--card:#fff;--ink:#14202b;--mut:#6b7885;--line:#dde3e9;--br:#e8590c;--br2:#c2410c;--ok:#15803d;--bad:#b91c1c;--r:12px}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+button,input,select,textarea{font:inherit;color:inherit}
+input,select,textarea{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:#fff}
+textarea{min-height:90px;resize:vertical}
+input[type=checkbox]{width:auto}
+label{display:block;font-size:13px;color:var(--mut);margin:0 0 10px}
+label>input,label>select,label>textarea{margin-top:4px;color:var(--ink);font-size:15px}
+.btn{border:0;background:var(--br);color:#fff;padding:9px 16px;border-radius:9px;cursor:pointer;font-weight:600}
+.btn:hover{background:var(--br2)}
+.btn.g{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn.g:hover{background:#f0f3f6}
+.btn.s{padding:5px 10px;font-size:13px}
+.btn.d{background:#fff;color:var(--bad);border:1px solid #f1c5c5}
+.btn[disabled]{opacity:.5;cursor:default}
+.hide{display:none!important}
+#login{max-width:420px;margin:12vh auto;padding:0 16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+h1{font-size:20px;margin:0 0 14px}
+h2{font-size:17px;margin:0 0 12px}
+h3{font-size:15px;margin:16px 0 8px}
+.err{color:var(--bad);margin:8px 0}
+.hint{color:var(--mut);font-size:13px}
+#top{position:sticky;top:0;z-index:20;background:#14202b;color:#fff;display:flex;gap:10px;align-items:center;padding:8px 14px;flex-wrap:wrap}
+#top b{font-size:16px}
+#top .sp{flex:1}
+#st{font-size:13px;opacity:.85}
+#tabs{display:flex;gap:4px;flex-wrap:wrap;padding:10px 14px 0;max-width:1100px;margin:0 auto}
+#tabs button{border:1px solid var(--line);background:#fff;padding:8px 13px;border-radius:9px 9px 0 0;cursor:pointer}
+#tabs button.on{background:var(--br);color:#fff;border-color:var(--br)}
+#main{max-width:1100px;margin:0 auto;padding:0 14px 80px}
+.pane{background:var(--card);border:1px solid var(--line);border-radius:0 var(--r) var(--r) var(--r);padding:16px}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.row>*{flex:1;min-width:160px}
+.row>.n{flex:0 0 auto;min-width:0}
+.item{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 8px;background:#fff}
+.item.off{opacity:.55;background:#f7f7f7}
+.item .hd{display:flex;gap:8px;align-items:center}
+.item .hd .t{flex:1;font-weight:600;cursor:pointer;overflow:hidden;text-overflow:ellipsis}
+.item .hd .t small{color:var(--mut);font-weight:400;margin-left:6px}
+.tag{font-size:11px;padding:2px 7px;border-radius:99px;background:#e5e9ee;color:#444}
+.tag.on{background:#dcfce7;color:var(--ok)}
+.tag.off{background:#fee2e2;color:var(--bad)}
+.tag.chg{background:#fef3c7;color:#92400e}
+.photos{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 12px}
+.ph{width:140px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.ph img{width:100%;height:105px;object-fit:cover;display:block;background:#eee}
+.ph .b{display:flex;justify-content:space-between;padding:4px}
+.ph .c{font-size:11px;text-align:center;background:var(--br);color:#fff}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 12px}
+.bar input[type=search]{max-width:280px}
+.bar select{max-width:220px}
+table{border-collapse:collapse;width:100%}
+td,th{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:middle}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#14202b;color:#fff;padding:11px 18px;border-radius:10px;z-index:50;max-width:90vw}
+.toast.bad{background:var(--bad)}
+.hist{display:flex;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.hist .m{flex:1;min-width:0}
+.hist .m small{color:var(--mut);display:block}
+.crumb{margin:0 0 12px}
+.crumb a{color:var(--br2);cursor:pointer}
+</style>
+</head>
+<body>
+
+<div id="login" class="hide"><div class="box" id="loginbox"></div></div>
+
+<div id="app" class="hide">
+  <div id="top"><b>Travel&amp;K · админка</b><span id="st"></span><span class="sp"></span>
+    <button class="btn g s" id="btn-site">Открыть сайт</button>
+    <button class="btn" id="btn-save" disabled>Сохранить</button>
+    <button class="btn g s" id="btn-out">Выйти</button></div>
+  <div id="tabs"></div>
+  <div id="main"><div class="pane" id="pane"></div></div>
+</div>
+
+<script>
+'use strict';
+/* ====================================================================
+   Конфиг. Пароль админа расшифровывает токен GitHub, лежащий в admin/vault.json.
+   ==================================================================== */
+var CFG = {repo: 'rutigenbart-sys/TravelK-site', branch: 'main', api: 'https://api.github.com', site: 'https://travelk.shop/'};
+(function () {   // переопределение только для локальных тестов
+  if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+    var q = new URLSearchParams(location.search);
+    if (q.get('api')) CFG.api = q.get('api');
+    if (q.get('branch')) CFG.branch = q.get('branch');
+    if (q.get('repo')) CFG.repo = q.get('repo');
+    CFG.site = location.origin + '/';
+  }
+})();
+
+var $ = function (s, r) { return (r || document).querySelector(s); };
+function h(tag, attrs) {
+  var e = document.createElement(tag);
+  if (attrs) for (var k in attrs) {
+    var v = attrs[k];
+    if (k === 'class') e.className = v;
+    else if (k.slice(0, 2) === 'on') e.addEventListener(k.slice(2), v);
+    else if (k === 'html') e.innerHTML = v;
+    else if (v === true) e.setAttribute(k, '');
+    else if (v !== false && v != null) e.setAttribute(k, v);
+  }
+  for (var i = 2; i < arguments.length; i++) add(e, arguments[i]);
+  return e;
+}
+function add(e, c) {
+  if (c == null || c === false) return;
+  if (Array.isArray(c)) c.forEach(function (x) { add(e, x); });
+  else e.appendChild(typeof c === 'object' ? c : document.createTextNode(String(c)));
+}
+function toast(msg, bad) {
+  var t = h('div', {class: 'toast' + (bad ? ' bad' : '')}, msg);
+  document.body.appendChild(t);
+  setTimeout(function () { t.remove(); }, bad ? 6000 : 2600);
+}
+
+/* ====================================================================
+   Шифрование токена паролем (PBKDF2 + AES-GCM)
+   ==================================================================== */
+var enc = new TextEncoder(), dec = new TextDecoder();
+function b64(buf) { var s = '', a = new Uint8Array(buf); for (var i = 0; i < a.length; i += 8192) s += String.fromCharCode.apply(null, a.subarray(i, i + 8192)); return btoa(s); }
+function unb64(s) { var b = atob(s), a = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; }
+function deriveKey(pass, salt, iter) {
+  return crypto.subtle.importKey('raw', enc.encode(pass), 'PBKDF2', false, ['deriveKey']).then(function (k) {
+    return crypto.subtle.deriveKey({name: 'PBKDF2', salt: salt, iterations: iter, hash: 'SHA-256'}, k, {name: 'AES-GCM', length: 256}, false, ['encrypt', 'decrypt']);
+  });
+}
+function sealToken(token, pass) {
+  var salt = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12)), iter = 300000;
+  return deriveKey(pass, salt, iter).then(function (key) {
+    return crypto.subtle.encrypt({name: 'AES-GCM', iv: iv}, key, enc.encode(token));
+  }).then(function (ct) { return {v: 1, iter: iter, salt: b64(salt), iv: b64(iv), ct: b64(ct)}; });
+}
+function openToken(v, pass) {
+  return deriveKey(pass, unb64(v.salt), v.iter).then(function (key) {
+    return crypto.subtle.decrypt({name: 'AES-GCM', iv: unb64(v.iv)}, key, unb64(v.ct));
+  }).then(function (pt) { return dec.decode(pt); });
+}
+
+/* ====================================================================
+   GitHub API
+   ==================================================================== */
+var TOKEN = '';
+function gh(path, opt) {
+  opt = opt || {};
+  var headers = {'Authorization': 'Bearer ' + TOKEN, 'Accept': opt.accept || 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28'};
+  if (opt.body) headers['Content-Type'] = 'application/json';
+  return fetch(CFG.api + '/repos/' + CFG.repo + path, {method: opt.method || 'GET', headers: headers, body: opt.body ? JSON.stringify(opt.body) : undefined, cache: 'no-store'}).then(function (r) {
+    if (!r.ok) return r.text().then(function (t) { var e = new Error('GitHub ' + r.status + ': ' + t.slice(0, 200)); e.status = r.status; throw e; });
+    return opt.raw ? r.text() : r.json();
+  });
+}
+function pool(items, n, fn) {
+  var i = 0, res = [];
+  function next() { if (i >= items.length) return Promise.resolve(); var k = i++; return fn(items[k], k).then(function (r) { res[k] = r; return next(); }); }
+  var ws = []; for (var j = 0; j < Math.min(n, items.length); j++) ws.push(next());
+  return Promise.all(ws).then(function () { return res; });
+}
+
+/* ====================================================================
+   Состояние: файлы data/*.json в памяти, изменённые помечаются dirty
+   ==================================================================== */
+var S = {head: null, tree: {}, files: {}, dirty: {}, images: {}, treeSha: null};
+
+function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+function loadAll(progress) {
+  return gh('/git/ref/heads/' + CFG.branch).then(function (ref) {
+    S.head = ref.object.sha;
+    return gh('/git/commits/' + S.head);
+  }).then(function (c) {
+    S.treeSha = c.tree.sha;
+    return gh('/git/trees/' + c.tree.sha + '?recursive=1');
+  }).then(function (t) {
+    var list = t.tree.filter(function (x) { return x.type === 'blob'; });
+    S.tree = {}; list.forEach(function (x) { S.tree[x.path] = x.sha; });
+    var jsons = list.filter(function (x) { return /^data\/.+\.json$/.test(x.path); });
+    var done = 0;
+    S.files = {}; S.dirty = {}; S.images = {};
+    return pool(jsons, 8, function (f) {
+      var cached = lsGet('tkb:' + f.sha);
+      var p = cached ? Promise.resolve(cached) : gh('/git/blobs/' + f.sha, {accept: 'application/vnd.github.raw+json', raw: true}).then(function (txt) { lsSet('tkb:' + f.sha, txt); return txt; });
+      return p.then(function (txt) { S.files[f.path] = JSON.parse(txt); progress && progress(++done, jsons.length); });
+    });
+  });
+}
+
+function touch(path) { S.dirty[path] = true; refreshSave(); }
+function drop(path) { S.dirty[path] = null; delete S.files[path]; refreshSave(); }
+function dirtyCount() { return Object.keys(S.dirty).length + Object.keys(S.images).length; }
+function refreshSave() {
+  var n = Object.keys(S.dirty).length;
+  var b = $('#btn-save');
+  b.disabled = !n; b.textContent = n ? 'Сохранить (' + n + ')' : 'Сохранить';
+  $('#st').textContent = n ? 'Есть несохранённые изменения' : '';
+}
+window.addEventListener('beforeunload', function (e) { if (Object.keys(S.dirty).length) { e.preventDefault(); e.returnValue = ''; } });
+
+function clean(k, v) { return k === '__open' ? undefined : v; }
+function jsonOut(o) { return JSON.stringify(o, clean, 1) + '\n'; }
+
+function commit(message, entries) {
+  // entries: [{path, content|blobSha|delete}]  — атомарный коммит через Git Data API
+  return gh('/git/ref/heads/' + CFG.branch).then(function (ref) {
+    var head = ref.object.sha;
+    return gh('/git/commits/' + head).then(function (c) {
+      var tree = entries.map(function (en) {
+        if (en.del) return {path: en.path, mode: '100644', type: 'blob', sha: null};
+        if (en.treeSha) return {path: en.path, mode: '040000', type: 'tree', sha: en.treeSha};
+        if (en.blobSha) return {path: en.path, mode: '100644', type: 'blob', sha: en.blobSha};
+        return {path: en.path, mode: '100644', type: 'blob', content: en.content};
+      });
+      return gh('/git/trees', {method: 'POST', body: {base_tree: c.tree.sha, tree: tree}}).then(function (nt) {
+        return gh('/git/commits', {method: 'POST', body: {message: message, tree: nt.sha, parents: [head]}});
+      });
+    });
+  }).then(function (nc) {
+    return gh('/git/refs/heads/' + CFG.branch, {method: 'PATCH', body: {sha: nc.sha}}).then(function () { return nc.sha; });
+  });
+}
+
+function save() {
+  var btn = $('#btn-save'); btn.disabled = true; btn.textContent = 'Сохраняю…';
+  var paths = Object.keys(S.dirty);
+  var imgs = Object.keys(S.images);
+  var ent = [];
+  // картинки → blobs
+  return pool(imgs, 3, function (p) {
+    return gh('/git/blobs', {method: 'POST', body: {content: S.images[p].b64, encoding: 'base64'}}).then(function (b) { ent.push({path: p, blobSha: b.sha}); });
+  }).then(function () {
+    paths.forEach(function (p) {
+      if (S.dirty[p] === null) ent.push({path: p, del: true});
+      else ent.push({path: p, content: jsonOut(S.files[p])});
+    });
+    var names = [];
+    paths.forEach(function (p) { names.push(p.replace(/^data\//, '').replace(/\.json$/, '')); });
+    var msg = 'Админка: ' + names.slice(0, 4).join(', ') + (names.length > 4 ? ' и ещё ' + (names.length - 4) : '') + (imgs.length ? ' (+' + imgs.length + ' фото)' : '');
+    return commit(msg, ent);
+  }).then(function (sha) {
+    S.head = sha; S.dirty = {}; S.images = {};
+    refreshSave();
+    toast('Сохранено. Сайт обновится через 1–2 минуты.');
+    watchBuild(sha);
+    return sha;
+  }).catch(function (e) {
+    refreshSave(); toast('Не удалось сохранить: ' + e.message, true); throw e;
+  });
+}
+
+/* статус публикации (нужно право Actions: read; если его нет — молча пропускаем) */
+function watchBuild(sha) {
+  var tries = 0, st = $('#st');
+  st.textContent = '⏳ Публикуется на сайт…';
+  function tick() {
+    if (++tries > 40) { st.textContent = ''; return; }
+    gh('/actions/runs?head_sha=' + sha + '&per_page=5').then(function (r) {
+      var run = (r.workflow_runs || [])[0];
+      if (!run) return setTimeout(tick, 4000);
+      if (run.status === 'completed') {
+        if (run.conclusion === 'success') { st.textContent = '✅ Опубликовано на сайте'; setTimeout(function () { if (!Object.keys(S.dirty).length) st.textContent = ''; }, 12000); }
+        else { st.textContent = '❌ Ошибка публикации — сайт не обновился, проверьте последнюю правку'; toast('Ошибка сборки сайта. Откройте «История» и откатите последнюю правку.', true); }
+      } else setTimeout(tick, 4000);
+    }).catch(function () { st.textContent = 'Сайт обновится через 1–2 минуты'; });
+  }
+  setTimeout(tick, 3000);
+}
+
+/* ====================================================================
+   Картинки: ресайз и сжатие в браузере → webp
+   ==================================================================== */
+function processImage(file, w, hgt) {
+  return new Promise(function (res, rej) {
+    var url = URL.createObjectURL(file), im = new Image();
+    im.onload = function () {
+      var c = document.createElement('canvas'); c.width = w; c.height = hgt;
+      var g = c.getContext('2d'), sr = im.width / im.height, dr = w / hgt, sx = 0, sy = 0, sw = im.width, sh = im.height;
+      if (sr > dr) { sw = im.height * dr; sx = (im.width - sw) / 2; } else { sh = im.width / dr; sy = (im.height - sh) / 2; }
+      g.drawImage(im, sx, sy, sw, sh, 0, 0, w, hgt);
+      c.toBlob(function (blob) {
+        URL.revokeObjectURL(url);
+        if (!blob) return rej(new Error('Не удалось обработать фото'));
+        var fr = new FileReader();
+        fr.onload = function () { res({b64: String(fr.result).split(',')[1], preview: fr.result, type: blob.type}); };
+        fr.readAsDataURL(blob);
+      }, 'image/webp', 0.82);
+    };
+    im.onerror = function () { URL.revokeObjectURL(url); rej(new Error('Это не картинка')); };
+    im.src = url;
+  });
+}
+function uploadPhoto(file, base, w, hgt) {
+  return processImage(file, w || 1000, hgt || 750).then(function (r) {
+    var path = 'img/u/' + base.replace(/[^a-z0-9-]/gi, '').slice(0, 40) + '-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5) + '.webp';
+    S.images[path] = r; refreshSave();
+    $('#btn-save').disabled = false;
+    return path;
+  });
+}
+function imgSrc(path) {
+  if (S.images[path]) return S.images[path].preview;
+  return CFG.site + path;
+}
+function pickFiles(multi) {
+  return new Promise(function (res) {
+    var i = h('input', {type: 'file', accept: 'image/*', multiple: !!multi, style: 'display:none'});
+    i.addEventListener('change', function () { res([].slice.call(i.files)); i.remove(); });
+    document.body.appendChild(i); i.click();
+  });
+}
+
+/* ====================================================================
+   Вспомогательное: транслит, поля форм
+   ==================================================================== */
+var TR = {а:'a',б:'b',в:'v',г:'g',д:'d',е:'e',ё:'e',ж:'zh',з:'z',и:'i',й:'y',к:'k',л:'l',м:'m',н:'n',о:'o',п:'p',р:'r',с:'s',т:'t',у:'u',ф:'f',х:'kh',ц:'ts',ч:'ch',ш:'sh',щ:'sch',ъ:'',ы:'y',ь:'',э:'e',ю:'yu',я:'ya'};
+function slugify(s) {
+  var o = ''; s.toLowerCase().split('').forEach(function (c) { o += TR[c] != null ? TR[c] : c; });
+  return o.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'item';
+}
+function uniq(base, taken) { var s = base, i = 2; while (taken.indexOf(s) >= 0) s = base + '-' + (i++); return s; }
+
+/* поле, привязанное к obj[key]; onchange вызывается после изменения */
+function F(label, obj, key, o) {
+  o = o || {};
+  var type = o.type || 'text', inp;
+  var cb = function () { if (o.on) o.on(); (o.touch || function () {})(); };
+  if (type === 'area') inp = h('textarea', {rows: o.rows || 4});
+  else if (type === 'select') {
+    inp = h('select');
+    o.options.forEach(function (op) { inp.appendChild(h('option', {value: op[0]}, op[1])); });
+  } else if (type === 'bool') {
+    inp = h('input', {type: 'checkbox'});
+    inp.checked = !!obj[key];
+    inp.addEventListener('change', function () { obj[key] = inp.checked; cb(); });
+    return h('label', {style: 'display:flex;gap:8px;align-items:center;color:var(--ink)'}, inp, label);
+  } else inp = h('input', {type: type === 'num' ? 'number' : 'text'});
+  var val = obj[key];
+  if (type === 'select') inp.value = val == null ? '' : val; else inp.value = val == null ? '' : val;
+  inp.addEventListener('input', function () {
+    var v = inp.value;
+    if (type === 'num') v = v === '' ? 0 : Number(v);
+    obj[key] = v; cb();
+  });
+  if (type === 'select') inp.addEventListener('change', function () { obj[key] = inp.value; cb(); });
+  return h('label', null, label, inp);
+}
+
+/* фото одной картинки (для главной/блога) */
+function ImgField(label, obj, key, base, w, hgt, tch) {
+  var wrap = h('div'), pv = h('img', {style: 'width:160px;height:' + Math.round(160 * (hgt || 750) / (w || 1000)) + 'px;object-fit:cover;border-radius:8px;border:1px solid var(--line);display:block;margin:4px 0;background:#eee'});
+  function draw() { pv.src = obj[key] ? imgSrc(obj[key]) : ''; pv.style.visibility = obj[key] ? 'visible' : 'hidden'; }
+  draw();
+  wrap.appendChild(h('div', {class: 'hint'}, label));
+  wrap.appendChild(pv);
+  wrap.appendChild(h('button', {class: 'btn g s', onclick: function () {
+    pickFiles(false).then(function (fs) { if (!fs[0]) return; return uploadPhoto(fs[0], base, w, hgt).then(function (p) { obj[key] = p; draw(); tch(); }); }).catch(function (e) { toast(e.message, true); });
+  }}, 'Заменить фото'));
+  return wrap;
+}
+
+/* общий редактор списка объектов */
+function ListEditor(arr, o) {
+  // o: title(item)->string, sub(item), fields(item, redraw)->nodes, make()->item, touch(), pub(true/false), label
+  var root = h('div');
+  function draw() {
+    root.innerHTML = '';
+    arr.forEach(function (it, i) {
+      var openKey = it.__open;
+      var body = h('div', {class: openKey ? '' : 'hide', style: 'margin-top:10px'});
+      var hd = h('div', {class: 'hd'},
+        h('span', {class: 't', onclick: function () { it.__open = !it.__open; body.classList.toggle('hide'); if (!body.firstChild) fill(); }}, o.title(it), o.sub ? h('small', null, o.sub(it)) : null),
+        o.pub !== false ? h('span', {class: 'tag ' + (it.published === false ? 'off' : 'on')}, it.published === false ? 'скрыто' : 'виден') : null,
+        h('button', {class: 'btn g s', title: 'Выше', onclick: function () { move(i, -1); }}, '↑'),
+        h('button', {class: 'btn g s', title: 'Ниже', onclick: function () { move(i, 1); }}, '↓'));
+      var box = h('div', {class: 'item' + (it.published === false ? ' off' : '')}, hd, body);
+      function fill() {
+        body.innerHTML = '';
+        add(body, o.fields(it, draw));
+        var act = h('div', {class: 'bar'});
+        if (o.pub !== false) act.appendChild(h('button', {class: 'btn g s', onclick: function () { it.published = it.published === false; o.touch(); draw(); }}, it.published === false ? 'Показать на сайте' : 'Скрыть с сайта'));
+        act.appendChild(h('button', {class: 'btn d s', onclick: function () { var g = o.guard && o.guard(it); if (g) return toast(g, true); if (confirm('Удалить «' + o.title(it) + '»? (можно вернуть через историю)')) { arr.splice(i, 1); o.touch(); draw(); } }}, 'Удалить'));
+        body.appendChild(act);
+      }
+      if (openKey) fill();
+      root.appendChild(box);
+    });
+    root.appendChild(h('button', {class: 'btn', onclick: function () { var n = o.make(); n.__open = true; arr.push(n); o.touch(); draw(); }}, '+ ' + (o.label || 'Добавить')));
+  }
+  function move(i, d) { var j = i + d; if (j < 0 || j >= arr.length) return; var t = arr[i]; arr[i] = arr[j]; arr[j] = t; o.touch(); draw(); }
+  draw();
+  return root;
+}
+/* выбор списка экскурсий (slugs) */
+function SlugList(arr, tch) {
+  var root = h('div');
+  function tour(s) { return S.files['data/tours/' + s + '.json']; }
+  function draw() {
+    root.innerHTML = '';
+    arr.forEach(function (s, i) {
+      var t = tour(s);
+      root.appendChild(h('div', {class: 'hist'},
+        h('span', {class: 'm'}, t ? t.title : s + ' (нет такой)', t && t.published === false ? h('small', null, 'скрыта — на сайте не показывается') : null),
+        h('button', {class: 'btn g s', onclick: function () { if (i) { var x = arr[i]; arr[i] = arr[i - 1]; arr[i - 1] = x; tch(); draw(); } }}, '↑'),
+        h('button', {class: 'btn g s', onclick: function () { if (i < arr.length - 1) { var x = arr[i]; arr[i] = arr[i + 1]; arr[i + 1] = x; tch(); draw(); } }}, '↓'),
+        h('button', {class: 'btn d s', onclick: function () { arr.splice(i, 1); tch(); draw(); }}, '✕')));
+    });
+    var inp = h('input', {list: 'dl-tours', placeholder: 'Добавить: начните вводить название экскурсии'});
+    inp.addEventListener('change', function () {
+      var v = inp.value.trim(), slug = null;
+      allTours().forEach(function (t) { if (t.title === v || t.slug === v) slug = t.slug; });
+      if (slug && arr.indexOf(slug) < 0) { arr.push(slug); tch(); draw(); } else if (v) { toast('Не нашёл такую экскурсию', true); inp.value = ''; }
+    });
+    root.appendChild(inp);
+  }
+  draw();
+  return root;
+}
+function allTours() {
+  return Object.keys(S.files).filter(function (p) { return /^data\/tours\//.test(p); }).map(function (p) { return S.files[p]; }).sort(function (a, b) { return a.order - b.order; });
+}
+function ensureDatalist() {
+  var d = $('#dl-tours'); if (d) d.remove();
+  d = h('datalist', {id: 'dl-tours'});
+  allTours().forEach(function (t) { d.appendChild(h('option', {value: t.title})); });
+  document.body.appendChild(d);
+}
+
+/* ====================================================================
+   Разметка текста экскурсии: ## заголовок, ### подзаголовок, - список, ! заметка, пустая строка между абзацами
+   ==================================================================== */
+function toMarkup(blocks, extra) {
+  var out = [];
+  blocks.forEach(function (b) {
+    if (b.t === 'h2') out.push('## ' + b.x);
+    else if (b.t === 'h3') out.push('### ' + b.x);
+    else if (b.t === 'p') out.push(b.x);
+    else if (b.t === 'note' && !b.style) out.push('! ' + b.x);
+    else if (b.t === 'ul') out.push(b.x.map(function (i) { return '- ' + i; }).join('\n'));
+    else { extra.push(b); out.push('[[особый блок ' + extra.length + ']]'); }
+  });
+  return out.join('\n\n');
+}
+function fromMarkup(text, extra) {
+  var blocks = [], paras = text.replace(/\r/g, '').split(/\n{2,}/);
+  paras.forEach(function (p) {
+    p = p.replace(/^\n+|\n+$/g, ''); if (!p.trim()) return;
+    var m;
+    if ((m = /^\[\[особый блок (\d+)\]\]$/.exec(p.trim()))) { var x = extra[+m[1] - 1]; if (x) blocks.push(x); return; }
+    var lines = p.split('\n');
+    var cur = null;
+    lines.forEach(function (ln) {
+      if (/^### /.test(ln)) { blocks.push({t: 'h3', x: ln.slice(4)}); cur = null; }
+      else if (/^## /.test(ln)) { blocks.push({t: 'h2', x: ln.slice(3)}); cur = null; }
+      else if (/^! /.test(ln)) { blocks.push({t: 'note', x: ln.slice(2)}); cur = null; }
+      else if (/^- /.test(ln)) { if (!cur || cur.t !== 'ul') { cur = {t: 'ul', x: []}; blocks.push(cur); } cur.x.push(ln.slice(2)); }
+      else { if (cur && cur.t === 'p') cur.x += '\n' + ln; else { cur = {t: 'p', x: ln}; blocks.push(cur); } }
+    });
+  });
+  return blocks;
+}
+function BodyEditor(t, tch) {
+  var extra = [], ta = h('textarea', {rows: 18, style: 'font-family:ui-monospace,Menlo,monospace;font-size:13px'});
+  ta.value = toMarkup(t.body, extra);
+  ta.addEventListener('input', function () { t.body = fromMarkup(ta.value, extra); tch(); });
+  return h('div', null,
+    h('div', {class: 'hint'}, 'Пишите обычным текстом. «## Заголовок», «### Подзаголовок», «- пункт списка», «! примечание». Абзацы разделяйте пустой строкой. Блоки «[[особый блок N]]» (таблицы, врезки) не трогайте — они сохранятся как есть.'),
+    ta);
+}
+function RawBody(p, tch) {   // блог: тот же текст, но можно HTML
+  var ta = h('textarea', {rows: 18, style: 'font-family:ui-monospace,Menlo,monospace;font-size:13px'});
+  ta.value = toMarkup(p.body, []);
+  ta.addEventListener('input', function () { p.body = fromMarkup(ta.value, []); tch(); });
+  return h('div', null, h('div', {class: 'hint'}, '«## Заголовок», «- пункт списка», абзацы через пустую строку.'), ta);
+}
+
+/* ====================================================================
+   Экскурсии
+   ==================================================================== */
+var TOUR_Q = '', TOUR_CAT = '', TOUR_EDIT = null;
+function tourPath(slug) { return 'data/tours/' + slug + '.json'; }
+
+function viewTours(pane) {
+  ensureDatalist();
+  if (TOUR_EDIT) return editTour(pane, TOUR_EDIT);
+  var cats = S.files['data/categories.json'];
+  pane.appendChild(h('div', {class: 'bar'},
+    h('input', {type: 'search', placeholder: 'Поиск по названию', value: TOUR_Q, oninput: function (e) { TOUR_Q = e.target.value; drawList(); }}),
+    (function () {
+      var s = h('select', {onchange: function (e) { TOUR_CAT = e.target.value; drawList(); }}, h('option', {value: ''}, 'Все категории'));
+      cats.forEach(function (c) { s.appendChild(h('option', {value: c.key}, c.title)); });
+      s.value = TOUR_CAT; return s;
+    })(),
+    h('span', {style: 'flex:1'}),
+    h('button', {class: 'btn', onclick: function () { newTour(); }}, '+ Новая экскурсия')));
+  var list = h('div'); pane.appendChild(list);
+  function drawList() {
+    list.innerHTML = '';
+    var q = TOUR_Q.toLowerCase();
+    var ts = allTours().filter(function (t) { return (!q || t.title.toLowerCase().indexOf(q) >= 0) && (!TOUR_CAT || t.cat === TOUR_CAT); });
+    var all = allTours();
+    ts.forEach(function (t) {
+      var ci = cats.filter(function (c) { return c.key === t.cat; })[0];
+      list.appendChild(h('div', {class: 'item' + (t.published === false ? ' off' : '')}, h('div', {class: 'hd'},
+        t.photos.length ? h('img', {src: imgSrc(typeof t.photos[0] === 'string' ? t.photos[0] : t.photos[0].s), style: 'width:54px;height:40px;object-fit:cover;border-radius:6px'}) : null,
+        h('span', {class: 't', onclick: function () { TOUR_EDIT = t.slug; render(); }}, t.title, h('small', null, (ci ? ci.title : t.cat) + ' · ' + (t.prices[0] ? t.prices[0].v + ' ฿' : '—'))),
+        h('span', {class: 'tag ' + (t.published === false ? 'off' : 'on')}, t.published === false ? 'скрыта' : 'на сайте'),
+        h('button', {class: 'btn g s', title: 'Выше в каталоге', onclick: function () { moveTour(all, t, -1); }}, '↑'),
+        h('button', {class: 'btn g s', title: 'Ниже в каталоге', onclick: function () { moveTour(all, t, 1); }}, '↓'),
+        h('button', {class: 'btn g s', onclick: function () { TOUR_EDIT = t.slug; render(); }}, 'Править'))));
+    });
+    if (!ts.length) list.appendChild(h('p', {class: 'hint'}, 'Ничего не найдено'));
+  }
+  drawList();
+}
+function moveTour(all, t, d) {
+  var i = all.indexOf(t), j = i + d; if (j < 0 || j >= all.length) return;
+  var o = all[j]; var tmp = t.order; t.order = o.order; o.order = tmp;
+  touch(tourPath(t.slug)); touch(tourPath(o.slug)); render();
+}
+function newTour() {
+  var title = prompt('Название новой экскурсии:'); if (!title) return;
+  var taken = allTours().map(function (t) { return t.slug; }), slug = uniq(slugify(title), taken);
+  var cat = (S.files['data/categories.json'][0] || {}).key;
+  var max = Math.max.apply(null, allTours().map(function (t) { return t.order; }));
+  var t = {slug: slug, published: false, order: max + 1, kicker: '', title: title, cat: cat, price_label: 'взрослый', photos: [],
+    days: 'Ежедневно', time: '', age: 'Уточняется', format: 'Один день', body: [{t: 'h2', x: 'О программе'}, {t: 'p', x: ''}],
+    prices: [{k: 'a', l: 'Взрослый', v: 0}, {k: 'c', l: 'Ребёнок', v: 0}], related: []};
+  S.files[tourPath(slug)] = t; touch(tourPath(slug));
+  TOUR_EDIT = slug; render();
+  toast('Создана как черновик: добавьте фото, цену и нажмите «Показать на сайте».');
+}
+function editTour(pane, slug) {
+  var path = tourPath(slug), t = S.files[path];
+  if (!t) { TOUR_EDIT = null; return render(); }
+  var tch = function () { touch(path); };
+  pane.appendChild(h('div', {class: 'crumb'}, h('a', {onclick: function () { TOUR_EDIT = null; render(); }}, '← Все экскурсии')));
+  pane.appendChild(h('h2', null, t.title || 'Новая экскурсия'));
+  var cats = S.files['data/categories.json'];
+  pane.appendChild(h('div', {class: 'bar'},
+    h('span', {class: 'tag ' + (t.published === false ? 'off' : 'on')}, t.published === false ? 'Скрыта (на сайте не видна)' : 'Опубликована'),
+    h('button', {class: 'btn s', onclick: function () {
+      if (t.published === false) {
+        if (!t.photos.length) return toast('Сначала добавьте хотя бы одно фото', true);
+        if (!t.title || !t.prices.length || !(t.prices[0].v > 0)) return toast('Нужны название и цена', true);
+      }
+      if (t.published === false && !(t.related || []).length) {
+        t.related = allTours().filter(function (x) { return x.cat === t.cat && x.slug !== t.slug && x.published !== false; }).slice(0, 3).map(function (x) { return x.slug; });
+      }
+      t.published = t.published === false; tch(); render();
+    }}, t.published === false ? 'Показать на сайте' : 'Скрыть с сайта'),
+    h('button', {class: 'btn g s', onclick: function () { dupTour(t); }}, 'Дублировать'),
+    h('button', {class: 'btn d s', onclick: function () {
+      if (confirm('Удалить экскурсию «' + t.title + '» полностью? Вернуть можно через «Историю».')) { drop(path); TOUR_EDIT = null; render(); }
+    }}, 'Удалить')));
+  pane.appendChild(h('div', {class: 'row'}, F('Название', t, 'title', {touch: tch}),
+    F('Категория', t, 'cat', {type: 'select', options: cats.map(function (c) { return [c.key, c.title]; }), touch: tch}),
+    F('Надпись над названием (город/тип)', t, 'kicker', {touch: tch})));
+
+  // фото
+  pane.appendChild(h('h3', null, 'Фотографии (первая — обложка)'));
+  var ph = h('div', {class: 'photos'}); pane.appendChild(ph);
+  function drawPh() {
+    ph.innerHTML = '';
+    t.photos.forEach(function (p, i) {
+      var src = typeof p === 'string' ? p : p.s;
+      ph.appendChild(h('div', {class: 'ph'}, h('img', {src: imgSrc(src)}),
+        i === 0 ? h('div', {class: 'c'}, 'ОБЛОЖКА') : h('button', {class: 'btn g s', style: 'width:100%;border-radius:0', onclick: function () { t.photos.unshift(t.photos.splice(i, 1)[0]); tch(); drawPh(); }}, 'Сделать обложкой'),
+        h('div', {class: 'b'},
+          h('button', {class: 'btn g s', onclick: function () { if (i) { var x = t.photos[i]; t.photos[i] = t.photos[i - 1]; t.photos[i - 1] = x; tch(); drawPh(); } }}, '←'),
+          h('button', {class: 'btn g s', onclick: function () { if (i < t.photos.length - 1) { var x = t.photos[i]; t.photos[i] = t.photos[i + 1]; t.photos[i + 1] = x; tch(); drawPh(); } }}, '→'),
+          h('button', {class: 'btn d s', onclick: function () { if (t.published !== false && t.photos.length === 1) return toast('У опубликованной экскурсии должно остаться хотя бы одно фото', true); t.photos.splice(i, 1); tch(); drawPh(); }}, '✕'))));
+    });
+    ph.appendChild(h('div', {style: 'align-self:center'}, h('button', {class: 'btn', onclick: function () {
+      pickFiles(true).then(function (fs) {
+        return fs.reduce(function (p, f) { return p.then(function () { return uploadPhoto(f, t.slug).then(function (path2) { t.photos.push(path2); }); }); }, Promise.resolve());
+      }).then(function () { tch(); drawPh(); }).catch(function (e) { toast(e.message, true); });
+    }}, '+ Добавить фото')));
+  }
+  drawPh();
+
+  // цены
+  pane.appendChild(h('h3', null, 'Тарифы и цены (฿)'));
+  var pr = h('div'); pane.appendChild(pr);
+  function drawPr() {
+    pr.innerHTML = '';
+    t.prices.forEach(function (p, i) {
+      pr.appendChild(h('div', {class: 'row', style: 'align-items:end'},
+        F('Название тарифа', p, 'l', {touch: tch}), F('Цена, ฿', p, 'v', {type: 'num', touch: tch}),
+        h('span', {class: 'n'}, h('button', {class: 'btn d s', style: 'margin-bottom:10px', onclick: function () { if (t.prices.length > 1) { t.prices.splice(i, 1); tch(); drawPr(); } }}, '✕'))));
+    });
+    pr.appendChild(h('button', {class: 'btn g s', onclick: function () {
+      var keys = t.prices.map(function (p) { return p.k; }), k = 'a'; var n = 0; while (keys.indexOf(k) >= 0) k = String.fromCharCode(97 + (++n));
+      t.prices.push({k: k, l: 'Новый тариф', v: 0}); tch(); drawPr();
+    }}, '+ Добавить тариф'));
+  }
+  drawPr();
+  pane.appendChild(h('div', {class: 'row'}, F('Подпись цены в каталоге', t, 'price_label', {type: 'select', options: [['взрослый', 'взрослый'], ['от', 'от']], touch: tch}),
+    F('Примечание у цены (необязательно)', t, 'book_note', {touch: tch})));
+
+  // расписание
+  if ('days' in t) {
+    pane.appendChild(h('h3', null, 'Расписание и условия'));
+    pane.appendChild(h('div', {class: 'row'}, F('Дни выезда', t, 'days', {touch: tch}), F('Время', t, 'time', {touch: tch}), F('Возраст / рост ребёнка', t, 'age', {touch: tch}), F('Формат', t, 'format', {touch: tch})));
+  } else if (t.facts) {
+    pane.appendChild(h('h3', null, 'Условия'));
+    t.facts.forEach(function (f) { pane.appendChild(h('div', {class: 'row'}, F('Пункт', f, 'l', {touch: tch}), F('Значение', f, 'v', {touch: tch}))); });
+  }
+  pane.appendChild(h('h3', null, 'Короткое описание под названием'));
+  pane.appendChild(F('', t, 'lead', {type: 'area', rows: 2, touch: tch}));
+  pane.appendChild(h('h3', null, 'Описание и программа'));
+  pane.appendChild(BodyEditor(t, tch));
+  pane.appendChild(h('h3', null, 'Похожие экскурсии (внизу страницы)'));
+  pane.appendChild(SlugList(t.related, tch));
+  pane.appendChild(h('details', {style: 'margin-top:16px'}, h('summary', {class: 'hint', style: 'cursor:pointer'}, 'Для поисковиков (описание в Google/Яндексе)'),
+    F('Описание страницы (meta description). Пусто — сформируется автоматически', t, 'meta', {type: 'area', rows: 2, touch: tch})));
+  pane.appendChild(h('p', {class: 'hint'}, 'Адрес страницы: /ekskursii/' + t.slug + '/'));
+}
+function dupTour(t) {
+  var taken = allTours().map(function (x) { return x.slug; }), slug = uniq(t.slug.replace(/-\d+$/, ''), taken);
+  var n = JSON.parse(JSON.stringify(t)); n.slug = slug; n.title = t.title + ' (копия)'; n.published = false;
+  n.order = Math.max.apply(null, allTours().map(function (x) { return x.order; })) + 1;
+  S.files[tourPath(slug)] = n; touch(tourPath(slug)); TOUR_EDIT = slug; render();
+}
+
+/* ====================================================================
+   Разделы-списки
+   ==================================================================== */
+function simpleList(pane, file, key, o) {
+  var d = S.files[file], tch = function () { touch(file); };
+  pane.appendChild(h('p', {class: 'hint'}, o.hint || ''));
+  pane.appendChild(ListEditor(d[key], {
+    title: o.title, sub: o.sub, make: function () { return o.make(d[key]); }, label: o.label, touch: tch, pub: o.pub,
+    fields: function (it, redraw) { return o.fields(it, tch, redraw); }
+  }));
+}
+function viewVisa(pane) {
+  pane.appendChild(h('h2', null, 'Визовые услуги'));
+  simpleList(pane, 'data/vizy.json', 'services', {title: function (i) { return i.title; }, sub: function (i) { return i.price + ' ฿'; }, label: 'Новая услуга',
+    make: function (arr) { var t = 'Новая услуга'; return {id: uniq('usluga', arr.map(function (x) { return x.id; })), eyebrow: 'Виза', title: t, text: '', days: '', time: '', price: 0, published: false}; },
+    fields: function (i, tch) { return [h('div', {class: 'row'}, F('Название', i, 'title', {touch: tch}), F('Над названием', i, 'eyebrow', {touch: tch}), F('Цена, ฿', i, 'price', {type: 'num', touch: tch})),
+      F('Описание', i, 'text', {type: 'area', touch: tch}), h('div', {class: 'row'}, F('Дни', i, 'days', {touch: tch}), F('Время', i, 'time', {touch: tch}))]; }});
+  pane.appendChild(h('h3', null, 'Блок «Что мы делаем»'));
+  simpleList(pane, 'data/vizy.json', 'what', {title: function (i) { return i.title; }, label: 'Новый пункт',
+    make: function () { return {ic: '📄', title: 'Новый пункт', text: '', published: true}; },
+    fields: function (i, tch) { return [h('div', {class: 'row'}, F('Значок (эмодзи)', i, 'ic', {touch: tch}), F('Заголовок', i, 'title', {touch: tch})), F('Текст', i, 'text', {type: 'area', touch: tch})]; }});
+}
+function viewTransfer(pane) {
+  var tch = function () { touch('data/transfer.json'); }, d = S.files['data/transfer.json'];
+  pane.appendChild(h('h2', null, 'Такси и трансферы — цена за машину'));
+  pane.appendChild(h('p', {class: 'hint'}, 'Три цены: ' + d.classes.map(function (c) { return c.name; }).join(' / ') + '.'));
+  pane.appendChild(ListEditor(d.routes, {title: function (i) { return i.title; }, sub: function (i) { return i.p.join(' / ') + ' ฿'; }, label: 'Новый маршрут', touch: tch,
+    make: function () { return {k: uniq('marshrut', d.routes.map(function (x) { return x.k; })), title: 'Новый маршрут', text: '', p: [0, 0, 0], published: false}; },
+    fields: function (i) { return [F('Маршрут', i, 'title', {touch: tch}), F('Описание', i, 'text', {type: 'area', touch: tch}),
+      h('div', {class: 'row'}, [0, 1, 2].map(function (n) { var w = {v: i.p[n]}; return F(d.classes[n].name + ', ฿', w, 'v', {type: 'num', touch: tch, on: function () { i.p[n] = w.v; }}); }))]; }}));
+  pane.appendChild(h('h3', null, 'Минибас (билет на человека)'));
+  pane.appendChild(ListEditor(d.bus, {title: function (i) { return i.title; }, sub: function (i) { return i.a + ' / ' + i.c + ' ฿'; }, label: 'Новое направление', touch: tch,
+    make: function () { return {k: uniq('minibas', d.bus.map(function (x) { return x.k; })), title: 'Новое направление', text: '', time: '', a: 0, c: 0, published: false}; },
+    fields: function (i) { return [F('Направление', i, 'title', {touch: tch}), F('Описание', i, 'text', {type: 'area', touch: tch}),
+      h('div', {class: 'row'}, F('Время', i, 'time', {touch: tch}), F('Взрослый, ฿', i, 'a', {type: 'num', touch: tch}), F('Ребёнок, ฿', i, 'c', {type: 'num', touch: tch}))]; }}));
+  pane.appendChild(h('h3', null, 'Такси с билетами — какие экскурсии показывать'));
+  pane.appendChild(SlugList(d.tickets, tch));
+}
+function viewPartners(pane) {
+  pane.appendChild(h('h2', null, 'Предложения партнёров'));
+  simpleList(pane, 'data/partners.json', 'tiles', {title: function (i) { return i.title; }, label: 'Новый партнёр',
+    make: function () { return {ic: '🎁', title: 'Новый партнёр', text: '', promo: '', published: false}; },
+    fields: function (i, tch) { return [h('div', {class: 'row'}, F('Значок (эмодзи)', i, 'ic', {touch: tch}), F('Название', i, 'title', {touch: tch})), F('Описание', i, 'text', {type: 'area', touch: tch}), F('Условия / промокод', i, 'promo', {touch: tch})]; }});
+  pane.appendChild(h('h3', null, 'Шопинг-трансферы'));
+  simpleList(pane, 'data/partners.json', 'shops', {title: function (i) { return i.title; }, label: 'Новое место',
+    make: function () { return {title: 'Новое место', text: '', price: '', hours: '', published: false}; },
+    fields: function (i, tch) { return [F('Название', i, 'title', {touch: tch}), F('Описание', i, 'text', {type: 'area', touch: tch}), h('div', {class: 'row'}, F('Цена', i, 'price', {touch: tch}), F('Время', i, 'hours', {touch: tch}))]; }});
+}
+function viewPromos(pane) {
+  var tch = function () { touch('data/promos.json'); }, d = S.files['data/promos.json'];
+  pane.appendChild(h('h2', null, 'Акции'));
+  simpleList(pane, 'data/promos.json', 'tiles', {title: function (i) { return i.title; }, label: 'Новая акция',
+    make: function () { return {dark: false, ic: '🎁', title: 'Новая акция', text: '', btn: 'Подробнее', href: '../kontakty/', published: false}; },
+    fields: function (i, t2) { return [h('div', {class: 'row'}, F('Значок (эмодзи)', i, 'ic', {touch: t2}), F('Заголовок', i, 'title', {touch: t2})), F('Текст', i, 'text', {type: 'area', touch: t2}),
+      h('div', {class: 'row'}, F('Текст кнопки', i, 'btn', {touch: t2}), F('Ссылка кнопки', i, 'href', {touch: t2})), F('Тёмная карточка', i, 'dark', {type: 'bool', touch: t2})]; }});
+  pane.appendChild(h('h3', null, 'Подборки экскурсий на странице акций'));
+  d.sections.forEach(function (s) {
+    pane.appendChild(h('div', {class: 'item'}, h('div', {class: 'row'}, F('Над заголовком', s, 'eyebrow', {touch: tch}), F('Заголовок подборки', s, 'title', {touch: tch})), SlugList(s.tours, tch)));
+  });
+}
+function viewBlog(pane) {
+  var posts = Object.keys(S.files).filter(function (p) { return /^data\/blog\//.test(p); }).map(function (p) { return S.files[p]; }).sort(function (a, b) { return a.order - b.order; });
+  pane.appendChild(h('h2', null, 'Блог'));
+  if (BLOG_EDIT) return editBlog(pane, BLOG_EDIT);
+  pane.appendChild(h('button', {class: 'btn', style: 'margin-bottom:12px', onclick: function () {
+    var title = prompt('Заголовок статьи:'); if (!title) return;
+    var city = prompt('Город / тема (коротко, например «Паттайя»):', ''); if (!city) return;
+    var slug = uniq(slugify(city), posts.map(function (x) { return x.slug; }));
+    var p = {slug: slug, published: false, order: posts.length + 1, city: city, title: title, lead: '', desc: '', old_og: false, img: null, art: ['#FF6B3D', '#14683B'], card_desc: '',
+      body: [{t: 'h2', x: 'О чём статья'}, {t: 'p', x: ''}], near: 'more', near_label: 'Острова и море', faq: []};
+    S.files['data/blog/' + slug + '.json'] = p; touch('data/blog/' + slug + '.json'); BLOG_EDIT = slug; render();
+    toast('Создана как черновик. Добавьте текст и фото, затем «Показать на сайте».');
+  }}, '+ Новая статья'));
+  posts.forEach(function (p) {
+    pane.appendChild(h('div', {class: 'item' + (p.published === false ? ' off' : '')}, h('div', {class: 'hd'},
+      h('span', {class: 't', onclick: function () { BLOG_EDIT = p.slug; render(); }}, p.title, h('small', null, p.city)),
+      h('span', {class: 'tag ' + (p.published === false ? 'off' : 'on')}, p.published === false ? 'скрыта' : 'на сайте'),
+      h('button', {class: 'btn g s', onclick: function () { var i = posts.indexOf(p); if (i) { var q = posts[i - 1]; var o = p.order; p.order = q.order; q.order = o; touch('data/blog/' + p.slug + '.json'); touch('data/blog/' + q.slug + '.json'); render(); } }}, '↑'),
+      h('button', {class: 'btn g s', onclick: function () { BLOG_EDIT = p.slug; render(); }}, 'Править'))));
+  });
+}
+var BLOG_EDIT = null;
+function editBlog(pane, slug) {
+  var path = 'data/blog/' + slug + '.json', p = S.files[path];
+  if (!p) { BLOG_EDIT = null; return render(); }
+  var tch = function () { touch(path); };
+  pane.appendChild(h('div', {class: 'crumb'}, h('a', {onclick: function () { BLOG_EDIT = null; render(); }}, '← Все статьи')));
+  pane.appendChild(h('div', {class: 'bar'},
+    h('span', {class: 'tag ' + (p.published === false ? 'off' : 'on')}, p.published === false ? 'Скрыта' : 'Опубликована'),
+    h('button', {class: 'btn s', onclick: function () { p.published = p.published === false; tch(); render(); }}, p.published === false ? 'Показать на сайте' : 'Скрыть с сайта'),
+    h('button', {class: 'btn d s', onclick: function () { if (confirm('Удалить статью?')) { drop(path); BLOG_EDIT = null; render(); } }}, 'Удалить')));
+  pane.appendChild(h('div', {class: 'row'}, F('Заголовок', p, 'title', {touch: tch}), F('Город / тема', p, 'city', {touch: tch})));
+  pane.appendChild(F('Вступление', p, 'lead', {type: 'area', rows: 3, touch: tch}));
+  pane.appendChild(F('Описание для Google/Яндекса и карточки блога', p, 'desc', {type: 'area', rows: 2, touch: tch, on: function () { p.card_desc = (p.desc || '').slice(0, 110) + '…'; }}));
+  pane.appendChild(ImgField('Главное фото статьи', p, 'img', p.slug, 1000, 500, tch));
+  pane.appendChild(h('h3', null, 'Текст статьи'));
+  pane.appendChild(RawBody(p, tch));
+  pane.appendChild(h('h3', null, 'Вопросы и ответы'));
+  pane.appendChild(ListEditor(p.faq, {pub: false, title: function (i) { return i.q || 'Вопрос'; }, label: 'Вопрос', touch: tch, make: function () { return {q: '', a: ''}; },
+    fields: function (i) { return [F('Вопрос', i, 'q', {touch: tch}), F('Ответ', i, 'a', {type: 'area', touch: tch})]; }}));
+}
+function viewCats(pane) {
+  var arr = S.files['data/categories.json'], tch = function () { touch('data/categories.json'); };
+  pane.appendChild(h('h2', null, 'Категории экскурсий (направления)'));
+  pane.appendChild(h('p', {class: 'hint'}, 'Порядок здесь = порядок кнопок-фильтров в каталоге. Новая категория появится в каталоге, когда в неё попадёт хотя бы одна экскурсия.'));
+  pane.appendChild(ListEditor(arr, {pub: false, title: function (i) { return i.title; }, sub: function (i) { return allTours().filter(function (t) { return t.cat === i.key; }).length + ' экскурсий'; }, label: 'Новая категория', touch: tch,
+    guard: function (i) { return allTours().some(function (t) { return t.cat === i.key; }) ? 'В категории есть экскурсии — сначала переместите их.' : ''; },
+    make: function () { return {key: uniq('kategoriya', arr.map(function (x) { return x.key; })), title: 'Новая категория', lead: '', desc: ''}; },
+    fields: function (i) { return [F('Название', i, 'title', {touch: tch}), F('Вступление на странице категории', i, 'lead', {type: 'area', rows: 3, touch: tch}), F('Описание для Google/Яндекса', i, 'desc', {type: 'area', rows: 2, touch: tch})]; }}));
+}
+
+/* ====================================================================
+   Главная + контакты
+   ==================================================================== */
+var HOME_GROUPS = [
+  ['Первый экран', [['hero_eyebrow', 'Надпись сверху'], ['hero_h1a', 'Заголовок (начало)'], ['hero_h1em', 'Заголовок (выделенная часть)'], ['hero_lead', 'Подзаголовок'], ['trust1', 'Преимущество 1'], ['trust2', 'Преимущество 2'], ['trust3', 'Преимущество 3']]],
+  ['Блок «Популярные экскурсии»', [['pop_eyebrow', 'Надпись'], ['pop_title', 'Заголовок'], ['pop_lead', 'Подпись']]],
+  ['Блок «Направления»', [['dirs_eyebrow', 'Надпись'], ['dirs_title', 'Заголовок']]],
+  ['Три плитки', [['tile1_title', 'Плитка 1 — заголовок'], ['tile1_text', 'Плитка 1 — текст'], ['tile1_link', 'Плитка 1 — ссылка'], ['tile2_title', 'Плитка 2 — заголовок'], ['tile2_text', 'Плитка 2 — текст'], ['tile2_link', 'Плитка 2 — ссылка'], ['tile3_title', 'Плитка 3 — заголовок'], ['tile3_text', 'Плитка 3 — текст'], ['tile3_link', 'Плитка 3 — ссылка']]],
+  ['Как это работает', [['steps_eyebrow', 'Надпись'], ['steps_title', 'Заголовок'], ['step1_title', 'Шаг 1'], ['step1_text', 'Шаг 1 — текст'], ['step2_title', 'Шаг 2'], ['step2_text', 'Шаг 2 — текст'], ['step3_title', 'Шаг 3'], ['step3_text', 'Шаг 3 — текст']]],
+  ['Блог и контакты', [['blog_eyebrow', 'Блог — надпись'], ['blog_title', 'Блог — заголовок'], ['contacts_eyebrow', 'Контакты — надпись'], ['contacts_title', 'Контакты — заголовок'], ['band_title', 'Нижний блок — заголовок'], ['band_text', 'Нижний блок — текст']]]
+];
+function viewHome(pane) {
+  var H = S.files['data/home.json'], tch = function () { touch('data/home.json'); };
+  pane.appendChild(h('h2', null, 'Главная страница'));
+  pane.appendChild(h('h3', null, 'Популярные экскурсии — порядок и состав'));
+  var pop = h('div'); pane.appendChild(pop);
+  function drawPop() {
+    pop.innerHTML = '';
+    H.popular.forEach(function (o, i) {
+      var t = S.files[tourPath(o.slug)];
+      pop.appendChild(h('div', {class: 'hist'},
+        t && t.photos.length ? h('img', {src: imgSrc(typeof t.photos[0] === 'string' ? t.photos[0] : t.photos[0].s), style: 'width:54px;height:40px;object-fit:cover;border-radius:6px'}) : null,
+        h('span', {class: 'm'}, t ? t.title : o.slug, t && t.published === false ? h('small', null, 'скрыта — на главной не показывается') : null),
+        h('button', {class: 'btn g s', onclick: function () { if (i) { var x = H.popular[i]; H.popular[i] = H.popular[i - 1]; H.popular[i - 1] = x; tch(); drawPop(); } }}, '↑'),
+        h('button', {class: 'btn g s', onclick: function () { if (i < H.popular.length - 1) { var x = H.popular[i]; H.popular[i] = H.popular[i + 1]; H.popular[i + 1] = x; tch(); drawPop(); } }}, '↓'),
+        h('button', {class: 'btn d s', onclick: function () { H.popular.splice(i, 1); tch(); drawPop(); }}, '✕')));
+    });
+    var inp = h('input', {list: 'dl-tours', placeholder: 'Добавить в популярные: начните вводить название'});
+    inp.addEventListener('change', function () {
+      var v = inp.value.trim(), slug = null; allTours().forEach(function (t) { if (t.title === v) slug = t.slug; });
+      if (slug && !H.popular.some(function (o) { return o.slug === slug; })) { H.popular.push({slug: slug}); tch(); drawPop(); } else { toast('Не нашёл такую экскурсию', true); inp.value = ''; }
+    });
+    pop.appendChild(inp);
+  }
+  drawPop();
+  pane.appendChild(h('h3', null, 'Направления — порядок, фото, подписи'));
+  var cats = S.files['data/categories.json'];
+  pane.appendChild(ListEditor(H.dirs, {title: function (i) { var c = cats.filter(function (x) { return x.key === i.key; })[0]; return c ? c.title : i.key; }, label: 'Направление', touch: tch,
+    make: function () { return {key: cats[0].key, img: '', text: '', published: true}; },
+    fields: function (i) { return [F('Категория', i, 'key', {type: 'select', options: cats.map(function (c) { return [c.key, c.title]; }), touch: tch}), F('Подпись', i, 'text', {type: 'area', rows: 2, touch: tch}), ImgField('Фото плитки', i, 'img', 'dir-' + i.key, 720, 540, tch)]; }}));
+  pane.appendChild(h('h3', null, 'Статьи блога на главной (3 шт.)'));
+  var posts = Object.keys(S.files).filter(function (p) { return /^data\/blog\//.test(p); }).map(function (p) { return S.files[p]; });
+  [0, 1, 2].forEach(function (n) {
+    var w = {v: H.blog[n] || ''};
+    pane.appendChild(F('Статья ' + (n + 1), w, 'v', {type: 'select', options: [['', '— нет —']].concat(posts.map(function (p) { return [p.slug, p.title]; })), touch: tch, on: function () { H.blog[n] = w.v; H.blog = H.blog.filter(Boolean); }}));
+  });
+  HOME_GROUPS.forEach(function (g) {
+    pane.appendChild(h('h3', null, g[0]));
+    g[1].forEach(function (f) { pane.appendChild(F(f[1], H.texts, f[0], {type: (H.texts[f[0]] || '').length > 60 ? 'area' : 'text', rows: 2, touch: tch})); });
+  });
+  pane.appendChild(h('h3', null, 'Заголовок и описание главной (для Google/Яндекса)'));
+  pane.appendChild(F('Заголовок страницы', H, 'title', {touch: tch}));
+  pane.appendChild(F('Описание', H, 'desc', {type: 'area', rows: 2, touch: tch}));
+}
+function viewContacts(pane) {
+  var s = S.files['data/site.json'], tch = function () { touch('data/site.json'); };
+  pane.appendChild(h('h2', null, 'Контакты по всему сайту'));
+  pane.appendChild(h('p', {class: 'hint'}, 'Меняются сразу везде: в шапке, подвале, на кнопках WhatsApp/Telegram, в разметке для поисковиков.'));
+  [['phone_display', 'Телефон (как показывать), например +66 6-4865-7933'], ['wa', 'WhatsApp — номер цифрами без «+», например 66648657933'], ['tg', 'Telegram — имя без @'], ['channel', 'Telegram-канал — имя без @'], ['instagram', 'Instagram — имя без @']].forEach(function (f) {
+    pane.appendChild(F(f[1], s, f[0], {touch: tch}));
+  });
+}
+
+/* ====================================================================
+   История изменений и откат
+   ==================================================================== */
+function viewHistory(pane) {
+  pane.appendChild(h('h2', null, 'История изменений'));
+  pane.appendChild(h('p', {class: 'hint'}, 'Каждое «Сохранить» — отдельная точка. «Вернуть» откатывает тексты, цены и настройки сайта к состоянию на выбранный момент (отдельным новым сохранением — ничего не теряется).'));
+  var box = h('div', null, 'Загружаю…'); pane.appendChild(box);
+  gh('/commits?path=data&sha=' + CFG.branch + '&per_page=40').then(function (list) {
+    box.innerHTML = '';
+    list.forEach(function (c, i) {
+      var d = new Date(c.commit.author.date);
+      box.appendChild(h('div', {class: 'hist'}, h('div', {class: 'm'}, c.commit.message.split('\n')[0], h('small', null, d.toLocaleString('ru-RU'))),
+        i === 0 ? h('span', {class: 'tag on'}, 'сейчас') : h('button', {class: 'btn g s', onclick: function () { restore(c); }}, 'Вернуть на этот момент')));
+    });
+  }).catch(function (e) { box.textContent = 'Не удалось загрузить историю: ' + e.message; });
+}
+function restore(c) {
+  if (Object.keys(S.dirty).length) return toast('Сначала сохраните или отмените текущие правки (перезагрузите страницу)', true);
+  if (!confirm('Вернуть данные сайта к состоянию «' + c.commit.message.split('\n')[0] + '»?')) return;
+  gh('/git/commits/' + c.sha).then(function (cm) { return gh('/git/trees/' + cm.tree.sha); }).then(function (t) {
+    var dt = t.tree.filter(function (x) { return x.path === 'data'; })[0];
+    if (!dt) throw new Error('В этой точке нет данных');
+    return commit('Админка: откат данных к «' + c.commit.message.split('\n')[0].slice(0, 60) + '»', [{path: 'data', treeSha: dt.sha}]);
+  }).then(function (sha) {
+    S.head = sha; toast('Готово, данные возвращены. Сайт обновится через 1–2 минуты.'); watchBuild(sha);
+    return loadAll().then(function () { render(); });
+  }).catch(function (e) { toast('Не удалось вернуть: ' + e.message, true); });
+}
+function viewLeads(pane) {
+  pane.appendChild(h('h2', null, 'Журнал заявок'));
+  pane.appendChild(h('div', {class: 'hint', style: 'line-height:1.6'}, 'Журнал заявок — отдельный этап. Для него нужен небольшой серверный приём заявок (сайт сейчас статический и сам ничего не принимает и не хранит). Что будет в журнале: контакты клиента, услуга, дата, тариф, сумма, статус. Статусы: «Черновик» — клиент только открыл WhatsApp/Telegram с готовым текстом; «Получена» — заявка действительно отправлена через форму. Запуск и стоимость обсуждаются отдельной строкой сметы.'));
+}
+
+/* ====================================================================
+   Каркас: вкладки, рендер, вход
+   ==================================================================== */
+var TABS = [['tours', 'Экскурсии', viewTours], ['home', 'Главная', viewHome], ['visa', 'Визы', viewVisa], ['transfer', 'Трансферы', viewTransfer], ['partners', 'Партнёры', viewPartners], ['promos', 'Акции', viewPromos],
+  ['blog', 'Блог', viewBlog], ['contacts', 'Контакты', viewContacts], ['cats', 'Категории', viewCats], ['leads', 'Заявки', viewLeads], ['hist', 'История', viewHistory]];
+var TAB = 'tours';
+function render() {
+  var tabs = $('#tabs'); tabs.innerHTML = '';
+  TABS.forEach(function (t) { tabs.appendChild(h('button', {class: t[0] === TAB ? 'on' : '', onclick: function () { TAB = t[0]; TOUR_EDIT = null; BLOG_EDIT = null; render(); }}, t[1])); });
+  var pane = $('#pane'); pane.innerHTML = '';
+  var y = window.scrollY;
+  TABS.filter(function (t) { return t[0] === TAB; })[0][2](pane);
+  window.scrollTo(0, y);
+}
+function startApp() {
+  $('#login').classList.add('hide'); $('#app').classList.remove('hide');
+  $('#st').textContent = 'Загружаю данные сайта…';
+  loadAll(function (a, b) { $('#st').textContent = 'Загружаю данные сайта… ' + a + '/' + b; }).then(function () {
+    $('#st').textContent = ''; refreshSave(); render();
+  }).catch(function (e) {
+    $('#st').textContent = ''; toast('Ошибка загрузки: ' + e.message, true);
+    if (e.status === 401 || e.status === 403) logout();
+  });
+}
+function logout() { try { sessionStorage.removeItem('tk_t'); } catch (e) {} TOKEN = ''; location.reload(); }
+
+function showLogin(mode, vault) {
+  var box = $('#loginbox'); box.innerHTML = ''; $('#login').classList.remove('hide');
+  var err = h('div', {class: 'err'});
+  function fail(m) { err.textContent = m; }
+  if (mode === 'login') {
+    var pw = h('input', {type: 'password', placeholder: 'Пароль администратора', autocomplete: 'current-password', autofocus: true});
+    var go = function () {
+      fail(''); var b = $('#go'); b.disabled = true; b.textContent = 'Проверяю…';
+      openToken(vault, pw.value).then(function (tok) {
+        TOKEN = tok; try { sessionStorage.setItem('tk_t', tok); } catch (e) {}
+        startApp();
+      }).catch(function () { b.disabled = false; b.textContent = 'Войти'; fail('Неверный пароль'); });
+    };
+    pw.addEventListener('keydown', function (e) { if (e.key === 'Enter') go(); });
+    box.appendChild(h('h1', null, 'Вход в админку Travel&K'));
+    box.appendChild(pw); box.appendChild(err);
+    box.appendChild(h('button', {class: 'btn', id: 'go', style: 'width:100%;margin-top:8px', onclick: go}, 'Войти'));
+    setTimeout(function () { pw.focus(); }, 50);
+  } else {
+    var tk = h('input', {type: 'password', placeholder: 'github_pat_… (токен GitHub)', autocomplete: 'off'});
+    var p1 = h('input', {type: 'password', placeholder: 'Придумайте пароль (не короче 10 символов)', autocomplete: 'new-password'});
+    var p2 = h('input', {type: 'password', placeholder: 'Повторите пароль', autocomplete: 'new-password'});
+    box.appendChild(h('h1', null, 'Первая настройка'));
+    box.appendChild(h('p', {class: 'hint'}, 'Один раз вставьте токен доступа GitHub (инструкция у разработчика) и придумайте пароль админки. Токен будет храниться только в зашифрованном виде, дальше вход — по одному паролю.'));
+    box.appendChild(h('label', null, 'Токен GitHub', tk)); box.appendChild(h('label', null, 'Пароль', p1)); box.appendChild(h('label', null, 'Пароль ещё раз', p2)); box.appendChild(err);
+    box.appendChild(h('button', {class: 'btn', id: 'go', style: 'width:100%', onclick: function () {
+      fail('');
+      if (!tk.value.trim()) return fail('Вставьте токен');
+      if (p1.value.length < 10) return fail('Пароль слишком короткий — минимум 10 символов');
+      if (p1.value !== p2.value) return fail('Пароли не совпадают');
+      var b = $('#go'); b.disabled = true; b.textContent = 'Настраиваю…';
+      TOKEN = tk.value.trim();
+      gh('').then(function (r) {
+        if (!r.permissions || !r.permissions.push) throw new Error('У токена нет права записи в репозиторий (Contents: Read and write)');
+        return sealToken(TOKEN, p1.value);
+      }).then(function (v) {
+        lsSet('tk_vault', JSON.stringify(v));
+        return commit('Админка: настройка входа', [{path: 'admin/vault.json', content: JSON.stringify(v)}]);
+      }).then(function () {
+        try { sessionStorage.setItem('tk_t', TOKEN); } catch (e) {}
+        startApp();
+      }).catch(function (e) { TOKEN = ''; b.disabled = false; b.textContent = 'Сохранить и войти'; fail(e.message); });
+    }}, 'Сохранить и войти'));
+  }
+}
+
+function fetchVault() {
+  var local = lsGet('tk_vault'); var tries = [];
+  tries.push(fetch('vault.json?v=' + Date.now(), {cache: 'no-store'}).then(function (r) { if (!r.ok) throw 0; return r.json(); }));
+  return tries[0].catch(function () {
+    return fetch('https://raw.githubusercontent.com/' + CFG.repo + '/' + CFG.branch + '/admin/vault.json', {cache: 'no-store'}).then(function (r) { if (!r.ok) throw 0; return r.json(); });
+  }).catch(function () { return local ? JSON.parse(local) : null; });
+}
+
+$('#btn-save').addEventListener('click', function () { save().catch(function () {}); });
+$('#btn-out').addEventListener('click', logout);
+$('#btn-site').addEventListener('click', function () { window.open(CFG.site, '_blank'); });
+
+(function boot() {
+  var tok = null; try { tok = sessionStorage.getItem('tk_t'); } catch (e) {}
+  if (tok) { TOKEN = tok; return startApp(); }
+  fetchVault().then(function (v) { showLogin(v ? 'login' : 'setup', v); });
+})();
 </script>
-<!-- /Yandex.Metrika counter --></head>
-<body><div id="pre" aria-hidden="true"><div class="pi"><svg class="ps" viewBox="0 0 100 100"><path style="--i:0" d="M50 50L44.1 35.7L50.0 2.0Z" fill="#E9BE55"/><path style="--i:1" d="M50 50L50.0 2.0L55.9 35.7Z" fill="#8A6420"/><path style="--i:2" d="M50 50L55.9 35.7L74.0 26.0Z" fill="#8A6420"/><path style="--i:3" d="M50 50L74.0 26.0L64.3 44.1Z" fill="#E9BE55"/><path style="--i:4" d="M50 50L64.3 44.1L98.0 50.0Z" fill="#E9BE55"/><path style="--i:5" d="M50 50L98.0 50.0L64.3 55.9Z" fill="#8A6420"/><path style="--i:6" d="M50 50L64.3 55.9L74.0 74.0Z" fill="#8A6420"/><path style="--i:7" d="M50 50L74.0 74.0L55.9 64.3Z" fill="#E9BE55"/><path style="--i:8" d="M50 50L55.9 64.3L50.0 98.0Z" fill="#E9BE55"/><path style="--i:9" d="M50 50L50.0 98.0L44.1 64.3Z" fill="#8A6420"/><path style="--i:10" d="M50 50L44.1 64.3L26.0 74.0Z" fill="#8A6420"/><path style="--i:11" d="M50 50L26.0 74.0L35.7 55.9Z" fill="#E9BE55"/><path style="--i:12" d="M50 50L35.7 55.9L2.0 50.0Z" fill="#E9BE55"/><path style="--i:13" d="M50 50L2.0 50.0L35.7 44.1Z" fill="#8A6420"/><path style="--i:14" d="M50 50L35.7 44.1L26.0 26.0Z" fill="#8A6420"/><path style="--i:15" d="M50 50L26.0 26.0L44.1 35.7Z" fill="#E9BE55"/></svg><div class="pw"><span style="--j:0">T</span><span style="--j:1">r</span><span style="--j:2">a</span><span style="--j:3">v</span><span style="--j:4">e</span><span style="--j:5">l</span><span style="--j:6" class=a>&amp;</span><span style="--j:7">K</span></div><div class="pb"><i></i></div><div class="pt">Таиланд · Экскурсии · Трансферы</div></div></div><!-- Yandex.Metrika noscript --><noscript><div><img src="https://mc.yandex.ru/watch/114134765" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika noscript --><header class="hdr"><div class="wrap in"><a class="logo" href="../" aria-label="Travel&amp;K — на главную"><img src="../assets/mark.svg" alt="" width="36" height="36"><span>Travel<b>&amp;K</b></span></a><nav class="nav" aria-label="Основное меню"><a href="../ekskursii/" class="">Экскурсии</a><a href="../transfer/" class="">Трансфер</a><a href="../vizy/" class="">Визы</a><a href="../partnery/" class="">Партнёры</a><a href="../akcii/" class="">Акции</a><a href="../blog/" class="">Блог</a><a href="../kontakty/" class="">Контакты</a><div class="nav-cta"><a class="btn wa wa-link" href="https://wa.me/66648657933" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.3-.15-1.263-.465-2.4-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.483.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Написать в WhatsApp</a><button class="btn" data-open="">Оставить заявку</button><a class="btn ghost" href="https://www.instagram.com/travel_and_k/" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg>Instagram</a></div></nav><div class="cta"><a class="wa-hd wa-link" href="https://wa.me/66648657933" rel="noopener" aria-label="Написать в WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.3-.15-1.263-.465-2.4-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.483.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>Написать в WhatsApp</span></a><button class="btn sm" data-open="">Заявка</button><button class="burger" aria-label="Меню" aria-expanded="false"><span></span></button></div></div></header><main><div class="wrap ph-head"><h1>Вход для администратора</h1><p class="lead">Введите пароль, затем на любой странице сайта нажимайте на цены, чтобы их изменить.</p></div>
-<div class="wrap"><div class="g2" style="align-items:start;padding-bottom:50px"><div class="panel"><form id="alf" class="form" data-s="tk1-" data-h="63dac9c9a7f21fda46207fbc04ba044e60a80895e3a02506f7504d14ff5279d3" autocomplete="off"><label>Пароль<input type="password" name="pw" required autocomplete="current-password" placeholder="••••••••"></label><div id="ale" style="color:#d92d20;font-weight:700;min-height:22px;margin:8px 0"></div><button class="btn wide" type="submit">Войти</button></form>
-<div id="als" style="display:none;margin-top:16px"><p style="color:var(--muted);margin-bottom:10px">Вы уже вошли. <a href="../" style="text-decoration:underline">Перейти на сайт</a></p><button class="btn ghost sm" id="alo" type="button">Выйти</button></div></div>
-<div class="panel"><h3 style="margin-bottom:10px">Токен GitHub (один раз)</h3><p style="color:var(--muted);font-size:.92rem;margin-bottom:12px">Чтобы кнопка «Опубликовать» сохраняла цены, нужен токен: GitHub → Settings → Developer settings → Fine-grained tokens → Generate. Репозиторий: только <b>TravelK-site</b>, права: <b>Contents — Read and write</b>. Токен хранится только в вашем браузере.</p><label style="display:block;font-weight:700;font-size:.9rem">Токен<input id="alt" type="password" placeholder="github_pat_…" style="width:100%;margin-top:6px;border:1.5px solid var(--line);border-radius:14px;padding:12px 14px"></label><button class="btn alt sm" id="alts" type="button" style="margin-top:12px">Сохранить токен</button></div></div></div></main><footer class="ftr"><div class="wrap"><div class="cols"><div><a class="logo" href="../" aria-label="Travel&amp;K — на главную"><img src="../assets/mark.svg" alt="" width="36" height="36"><span>Travel<b>&amp;K</b></span></a><p style="margin-top:16px;max-width:290px">Экскурсии, трансферы и визовая поддержка в Таиланде. Гиды на русском языке, понятные цены в батах.</p><div class="soc"><a class="wa-link" href="https://wa.me/66648657933" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.3-.15-1.263-.465-2.4-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.483.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a><a href="https://www.instagram.com/travel_and_k/" rel="noopener" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></a><a href="https://t.me/NikSergF" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.1 2.9 11.2c-1.2.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.5c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.8-.8l3.1-14.7c.3-1.2-.5-1.8-1.5-1.4Zm-3.5 3.3-8.6 7.8-.3 3.4-1.4-4.6 10.3-6.6Z"/></svg></a></div></div><div><h4>Разделы</h4><a href="../ekskursii/">Экскурсии</a><a href="../transfer/">Такси и трансфер</a><a href="../vizy/">Визовые услуги</a><a href="../partnery/">Партнёры и промокоды</a><a href="../akcii/">Акции</a></div><div><h4>Информация</h4><a href="../blog/">Блог о городах Таиланда</a><a href="../kontakty/">Контакты</a><a href="../politika/">Политика конфиденциальности</a></div><div><h4>Связь</h4><a class="waf wa-link" href="https://wa.me/66648657933" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.3-.15-1.263-.465-2.4-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.483.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp +66 6-4865-7933</a><a href="https://www.instagram.com/travel_and_k/" rel="noopener" target="_blank">Instagram @travel_and_k</a><a href="https://t.me/NikSergF" rel="noopener">Telegram @NikSergF</a><a href="https://t.me/life_jorney" rel="noopener">Канал t.me/life_jorney</a></div></div><div class="copy"><span>© <span id="yr">2026</span> Travel&amp;K. Цены указаны в тайских батах (THB) и могут меняться.</span><span>Сайт разработал <a href="https://dmitry-web.ru" target="_blank" rel="noopener" style="display:inline;text-decoration:underline">Дмитрий — веб-разработчик</a></span></div></div></footer>
-<div class="mbar"><a class="w wa-link" href="https://wa.me/66648657933" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.3-.15-1.263-.465-2.4-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.483.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Написать в WhatsApp</a><button class="z" data-open="">Заявка</button></div>
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Заявка"><div class="panel"><button class="x" aria-label="Закрыть">✕</button><h3 style="margin-bottom:6px">Оставьте заявку</h3><p style="color:var(--muted);margin-bottom:14px;font-size:.92rem">Подберём программу, рассчитаем цену и подтвердим бронь в мессенджере.</p><a class="help wa-link" href="https://wa.me/66648657933" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.3-.15-1.263-.465-2.4-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.483.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Нужна помощь? Написать в WhatsApp</a><form class="form" novalidate onsubmit="return false"><div class="fields">
-<div class="row"><label>Имя<input name="name" required autocomplete="name" placeholder="Как к вам обращаться"></label><label>Telegram / WhatsApp / телефон<input name="contact" required autocomplete="tel" placeholder="@username или +7…"></label></div>
-<label>Что интересует<input name="tour" placeholder="Экскурсия, трансфер, виза…" value=""></label><label>Желаемая дата<input name="date" type="date"></label><div class="row"><label>Взрослых<input name="adults" type="number" min="1" max="30" value="2" inputmode="numeric"></label><label>Детей<input name="kids" type="number" min="0" max="20" value="0" inputmode="numeric"></label></div><label>Отель / район<input name="hotel" placeholder="Например: Паттайя, Джомтьен"></label>
-<label>Комментарий<textarea name="comment" placeholder="Пожелания, вопросы"></textarea></label>
-<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-<button class="btn wide" type="submit">Отправить заявку</button>
-<small>Нажимая кнопку, вы соглашаетесь с <a href="../politika/" style="text-decoration:underline">политикой обработки данных</a>. Ответим в течение часа в мессенджере.</small></div>
-<div class="ok">Спасибо! Заявка отправлена — мы свяжемся с вами в Telegram или WhatsApp.</div></form></div></div><div class="lb"></div><script>window.TK={tg:"NikSergF",wa:"66648657933",ym:114134765,endpoint:"../send.php",site:null,base:"../"};</script><script src="../assets/admin.js" defer></script><script src="../assets/app.js?v=20261110" defer></script></body></html>
+</body>
+</html>
