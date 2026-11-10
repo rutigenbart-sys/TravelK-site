@@ -62,12 +62,14 @@ h3{font-size:15px;margin:16px 0 8px}
 .bar select{max-width:220px}
 table{border-collapse:collapse;width:100%}
 td,th{border-bottom:1px solid var(--line);padding:7px 6px;text-align:left;vertical-align:middle}
-.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#14202b;color:#fff;padding:11px 18px;border-radius:10px;z-index:50;max-width:90vw}
+.toasts{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:50;display:flex;flex-direction:column;gap:8px;align-items:center;max-width:90vw}
+.toast{background:#14202b;color:#fff;padding:11px 18px;border-radius:10px}
 .toast.bad{background:var(--bad)}
 .hist{display:flex;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
 .hist .m{flex:1;min-width:0}
 .hist .m small{color:var(--mut);display:block}
 .crumb{margin:0 0 12px}
+@media(max-width:640px){.item .hd{flex-wrap:wrap}.item .hd .t{flex:1 1 100%;white-space:normal}#top .sp{display:none}}
 .crumb a{color:var(--br2);cursor:pointer}
 </style>
 </head>
@@ -120,8 +122,9 @@ function add(e, c) {
   else e.appendChild(typeof c === 'object' ? c : document.createTextNode(String(c)));
 }
 function toast(msg, bad) {
-  var t = h('div', {class: 'toast' + (bad ? ' bad' : '')}, msg);
-  document.body.appendChild(t);
+  var t = h('div', {class: 'toast' + (bad ? ' bad' : '')}, msg), box = $('#toasts');
+  if (!box) { box = h('div', {id: 'toasts', class: 'toasts'}); document.body.appendChild(box); }
+  box.appendChild(t);
   setTimeout(function () { t.remove(); }, bad ? 6000 : 2600);
 }
 

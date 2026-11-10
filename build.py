@@ -41,6 +41,11 @@ def load_data():
     tours = {}
     for p in sorted(glob.glob(os.path.join(ROOT, 'data/tours/*.json'))):
         t = json.load(open(p, encoding='utf8'))
+        t['prices'] = [p for p in t.get('prices', []) if (p.get('v') or 0) > 0]
+        if not t['prices'] or (t.get('published', True) and not t.get('title')):
+            print('WARN: %s has no positive price -> treated as hidden' % t['slug'], file=sys.stderr)
+            t['published'] = False
+            t['prices'] = [{'k': 'a', 'l': '', 'v': 0}]
         tours[t['slug']] = t
     d['tours'] = tours
     d['vizy'] = jl('data/vizy.json'); d['partners'] = jl('data/partners.json')
