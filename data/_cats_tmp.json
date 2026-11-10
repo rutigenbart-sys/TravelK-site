@@ -1,0 +1,46 @@
+[
+ {
+  "key": "avtorskie",
+  "title": "Авторские туры"
+ },
+ {
+  "key": "bangkok",
+  "title": "Бангкок"
+ },
+ {
+  "key": "more",
+  "title": "Острова и море"
+ },
+ {
+  "key": "nochevka",
+  "title": "Туры с ночёвкой"
+ },
+ {
+  "key": "kwai",
+  "title": "Река Квай"
+ },
+ {
+  "key": "sever",
+  "title": "Север Таиланда"
+ },
+ {
+  "key": "zoo",
+  "title": "Зоопарки и парки"
+ },
+ {
+  "key": "pattaya",
+  "title": "Паттайя и окрестности"
+ },
+ {
+  "key": "active",
+  "title": "Активный отдых"
+ },
+ {
+  "key": "show",
+  "title": "Вечерние шоу"
+ },
+ {
+  "key": "ritual",
+  "title": "Сак Янт и ритуалы"
+ }
+]

@@ -1,0 +1,157 @@
+{
+ "texts": {
+  "hero_eyebrow": "Таиланд · Паттайя · Бангкок",
+  "hero_h1a": "Таиланд, куда ",
+  "hero_h1em": "хочется вернуться",
+  "hero_lead": "Подберём экскурсии под ваш бюджет и расскажем об актуальных акциях.",
+  "trust1": "150+ экскурсий",
+  "trust2": "Гиды на русском",
+  "trust3": "Ответ за час",
+  "pop_eyebrow": "Хиты",
+  "pop_title": "Популярные экскурсии",
+  "pop_lead": "Программы, которые гости выбирают чаще всего.",
+  "dirs_eyebrow": "Направления",
+  "dirs_title": "Куда отправимся",
+  "tile1_title": "Такси и трансфер",
+  "tile1_text": "Аэропорты, острова, города. Фиксированная цена за машину и выбор класса.",
+  "tile2_title": "Визовые услуги",
+  "tile2_text": "Бордер-раны, продление, 90 дней, TDAC и консультации.",
+  "tile3_title": "Партнёры и акции",
+  "tile3_text": "Промокоды на байки, жильё, рестораны и бесплатные трансферы.",
+  "tile1_link": "Выбрать маршрут →",
+  "tile2_link": "Узнать больше →",
+  "tile3_link": "Смотреть предложения →",
+  "steps_eyebrow": "Как это работает",
+  "steps_title": "Три шага до отпуска",
+  "step1_title": "Выберите",
+  "step1_text": "Откройте каталог, сравните цены и дни выезда.",
+  "step2_title": "Оставьте заявку",
+  "step2_text": "Форма занимает минуту: имя, контакт и желаемая дата.",
+  "step3_title": "Получите подтверждение",
+  "step3_text": "Менеджер свяжется в Telegram или WhatsApp и согласует детали.",
+  "blog_eyebrow": "Блог",
+  "blog_title": "Путеводители по городам",
+  "contacts_eyebrow": "Связь",
+  "contacts_title": "Напишите нам удобным способом",
+  "band_title": "Расскажите, что хотите увидеть",
+  "band_text": "Оставьте заявку — подберём программу под даты и бюджет и рассчитаем цену. Или напишите сразу в мессенджер."
+ },
+ "title": "Экскурсии и трансферы в Таиланде | Travel&K",
+ "desc": "Travel&K — экскурсии по Таиланду, такси и трансферы, визовые услуги. Гиды на русском, цены в батах, заявка за минуту.",
+ "popular": [
+  {
+   "slug": "otkrytyy-zoopark-kkhao-kkheo"
+  },
+  {
+   "slug": "tropicheskiy-sad-nong-nuch"
+  },
+  {
+   "slug": "diskaveri-tur-8-v-1"
+  },
+  {
+   "slug": "vecherniy-siti-tur-v-pattaye"
+  },
+  {
+   "slug": "zateryannyy-mir"
+  },
+  {
+   "slug": "vecherniy-bangkok"
+  },
+  {
+   "slug": "vecherniy-bangkok-new",
+   "tag": "NEW"
+  },
+  {
+   "slug": "tayskoe-safari"
+  },
+  {
+   "slug": "tayskiy-ekspress"
+  },
+  {
+   "slug": "v-logovo-drakona"
+  },
+  {
+   "slug": "izumitelnyy-tailand"
+  },
+  {
+   "slug": "pyat-chudes"
+  },
+  {
+   "slug": "ko-si-chang-ostrov-udachi"
+  },
+  {
+   "slug": "zolotoy-mangrovyy-les"
+  },
+  {
+   "slug": "ayuttayya-drevnyaya-stolitsa",
+   "days": "По дням"
+  }
+ ],
+ "dirs": [
+  {
+   "key": "avtorskie",
+   "img": "img/p050-3.webp",
+   "text": "Однодневные программы: храмы, природа, рынки и ритуалы",
+   "published": true
+  },
+  {
+   "key": "bangkok",
+   "img": "img/p026-1.webp",
+   "text": "Обзорные, вечерние и тематические экскурсии по столице",
+   "published": true
+  },
+  {
+   "key": "more",
+   "img": "img/p001-1.webp",
+   "text": "Катамараны, круизы, снорклинг и пляжи Паттайи",
+   "published": true
+  },
+  {
+   "key": "nochevka",
+   "img": "img/kc-fish.webp",
+   "text": "2–4 дня: острова с отелем, север, Исан, Сукхотай",
+   "published": true
+  },
+  {
+   "key": "kwai",
+   "img": "img/p019-1.webp",
+   "text": "Мост через реку Квай, Тайский экспресс, сафари",
+   "published": true
+  },
+  {
+   "key": "sever",
+   "img": "img/p020-1.webp",
+   "text": "Чиангмай, Золотой треугольник, Чианг Рай",
+   "published": true
+  },
+  {
+   "key": "zoo",
+   "img": "img/p057-1.webp",
+   "text": "Сафари, океанариумы, фермы, аквапарки",
+   "published": true
+  },
+  {
+   "key": "pattaya",
+   "img": "img/p067-1.webp",
+   "text": "Короткие туры на полдня: шоу, сады, храмы",
+   "published": true
+  },
+  {
+   "key": "active",
+   "img": "img/p044-1.webp",
+   "text": "Дайвинг, квадроциклы, парашют, рыбалка",
+   "published": true
+  },
+  {
+   "key": "show",
+   "img": "img/show-shou-transvestitov-alkazar.webp",
+   "text": "Кабаре и шоу Паттайи с трансфером",
+   "published": true
+  }
+ ],
+ "blog": [
+  "pattaya",
+  "bangkok",
+  "phuket"
+ ]
+}

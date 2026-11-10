@@ -1,0 +1,50 @@
+{
+ "vizy": {
+  "title": "Визовые услуги в Таиланде — бордер-ран, продление | Travel&K",
+  "desc": "Бордер-раны в Лаос из Паттайи и Бангкока, продление пребывания, 90-дневное уведомление, TDAC. Цены и заявка онлайн.",
+  "ld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://travelk.shop/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Визовые услуги\",\"item\":\"https://travelk.shop/\"}]}",
+   "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Что такое бордер-ран?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Это поездка к границе и обратно для выхода из страны и повторного въезда: так получают новый штамп или активируют следующую часть мульти-визы. Мы организуем микроавтобус, сопровождение и помощь с TDAC.\"}},{\"@type\":\"Question\",\"name\":\"Можно ли продлить штамп без выезда из страны?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Да, в Таиланде действует продление пребывания в иммиграционном офисе. Срок и сбор определяются правилами на момент подачи — менеджер подскажет актуальные условия.\"}},{\"@type\":\"Question\",\"name\":\"Что такое 90-дневное уведомление?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Иностранцы, находящиеся в Таиланде более 90 дней подряд, обязаны сообщать адрес проживания. Мы напомним и поможем оформить.\"}},{\"@type\":\"Question\",\"name\":\"Нужна ли карта TDAC?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Да, перед въездом заполняется электронная карта прибытия. Мы поможем с заполнением.\"}},{\"@type\":\"Question\",\"name\":\"Правила визового режима меняются?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Да, правила для разных стран и типов виз обновляются. Перед поездкой проверьте их на официальных сайтах или у менеджера.\"}}]}"
+  ]
+ },
+ "partnery": {
+  "title": "Партнёры и промокоды — аренда байков, недвижимость, рестораны | Travel&K",
+  "desc": "Промокоды и скидки от партнёров Travel&K в Таиланде: аренда байков, риэлторы, рестораны, спа. Бесплатные шопинг-трансферы.",
+  "ld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://travelk.shop/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Партнёры\",\"item\":\"https://travelk.shop/\"}]}"
+  ]
+ },
+ "akcii": {
+  "title": "Акции и скидки на экскурсии в Таиланде | Travel&K",
+  "desc": "Выгодные экскурсии до 1000 бат, семейные программы, бесплатные трансферы и промокоды партнёров Travel&K.",
+  "ld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://travelk.shop/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Акции\",\"item\":\"https://travelk.shop/\"}]}"
+  ]
+ },
+ "transfer": {
+  "title": "Такси и трансфер в Таиланде — цены | Travel&K",
+  "desc": "Трансфер из Паттайи в аэропорты Бангкока и Утапао, на острова Самет, Чанг, Куд. Фиксированные цены, выбор класса автомобиля.",
+  "ld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://travelk.shop/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Трансфер\",\"item\":\"https://travelk.shop/\"}]}"
+  ]
+ },
+ "kontakty": {
+  "title": "Контакты — телефон, Telegram, WhatsApp | Travel&K",
+  "desc": "Телефон +66 6-4865-7933, Telegram @NikSergF, WhatsApp +66 6-4865-7933 и канал t.me/life_jorney. QR-код сайта.",
+  "ld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://travelk.shop/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Контакты\",\"item\":\"https://travelk.shop/\"}]}"
+  ]
+ },
+ "politika": {
+  "title": "Политика обработки данных | Travel&K",
+  "desc": "Как Travel&K обрабатывает данные из заявок.",
+  "ld": []
+ },
+ "blog": {
+  "title": "Блог о Таиланде — путеводители по городам и островам | Travel&K",
+  "desc": "Путеводители по Паттайе, Бангкоку, Пхукету, Чиангмаю, Краби, Самуи, Хуа Хину, Аюттайе, Ко Чангу и Ко Самету.",
+  "ld": [
+   "{\"@context\":\"https://schema.org\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Главная\",\"item\":\"https://travelk.shop/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Блог\",\"item\":\"https://travelk.shop/\"}]}"
+  ]
+ }
+}

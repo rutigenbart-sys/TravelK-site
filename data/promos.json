@@ -1,0 +1,59 @@
+{
+ "tiles": [
+  {
+   "dark": true,
+   "ic": "🎁",
+   "title": "Бесплатные трансферы",
+   "text": "Поездки в аптеку тайской медицины, ювелирные фабрики и салон латекса с бесплатным трансфером в обе стороны.",
+   "btn": "Подробнее",
+   "href": "@@B@@partnery/",
+   "published": true
+  },
+  {
+   "dark": false,
+   "ic": "👨‍👩‍👧",
+   "title": "Детские цены",
+   "text": "На большинство программ действуют сниженные цены для детей. Возраст и рост указаны в карточке.",
+   "btn": "Смотреть экскурсии",
+   "href": "@@B@@ekskursii/",
+   "published": true
+  },
+  {
+   "dark": false,
+   "ic": "📣",
+   "title": "Промокоды партнёров",
+   "text": "Скидки на аренду байков, жильё и рестораны — по промокодам из нашего канала.",
+   "btn": "Telegram-канал",
+   "href": "https://t.me/life_jorney",
+   "published": true
+  }
+ ],
+ "sections": [
+  {
+   "eyebrow": "Бюджетно",
+   "title": "Экскурсии до 1000 ฿",
+   "tours": [
+    "zmeinaya-ferma-i-shou-zmey",
+    "voennyy-plyazh-say-keo",
+    "plyazh-tantsuyushchey-devushki-sattakhip",
+    "3d-galereya-art-in-paradise",
+    "krokodilovaya-ferma",
+    "mini-siam-park-miniatyur",
+    "okeanarium-pattaya-underwater-world",
+    "derevnya-slonov-v-pattaye"
+   ]
+  },
+  {
+   "eyebrow": "С детьми",
+   "title": "Семейные программы",
+   "tours": [
+    "ostrov-samet-i-faer-shou",
+    "voennyy-plyazh-say-keo",
+    "plyazh-tantsuyushchey-devushki-sattakhip",
+    "chernaya-zhemchuzhina",
+    "fotookhota-na-kitov-brayda",
+    "akvapark-columbia-pictures-aquaverse"
+   ]
+  }
+ ]
+}

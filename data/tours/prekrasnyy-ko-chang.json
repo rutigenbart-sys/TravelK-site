@@ -1,0 +1,78 @@
+{
+ "slug": "prekrasnyy-ko-chang",
+ "published": true,
+ "order": 5,
+ "kicker": "Туры с ночёвкой · новинка",
+ "title": "Прекрасный Ко Чанг",
+ "lead": "Два дня на тропическом острове: паром, храмы и слоны, отель с бассейном, фаер-шоу на пляже и (в «Премиуме») три острова со снорклингом.",
+ "cat": "nochevka",
+ "price_label": "от",
+ "photos": [
+  "img/kc-fish.webp",
+  "img/kc-pool1.webp",
+  "img/kc-pool2.webp",
+  "img/kc-rest.webp",
+  "img/kc-room.webp"
+ ],
+ "facts": [
+  {
+   "l": "Формат",
+   "v": "2 дня / 1 ночь"
+  },
+  {
+   "l": "Маршрут",
+   "v": "Паттайя — Ко Чанг — Паттайя"
+  },
+  {
+   "l": "Выезд",
+   "v": "Сбор с 05:30"
+  },
+  {
+   "l": "Язык",
+   "v": "Русский гид"
+  }
+ ],
+ "cc": [
+  "2 дня / 1 ночь"
+ ],
+ "cp": false,
+ "after_facts": "\n<div class=\"g2\" style=\"margin:8px 0 28px;align-items:start\"><div class=\"pks\"><div class=\"pk\"><span class=\"eyebrow\">Стандарт</span><div class=\"price\" style=\"font-size:2rem\"><small>за человека</small>{{pe:std}}</div><ul><li>Трансфер, страховка, гид</li><li>Храм, смотровая, слоновья ферма</li><li>Отель Paradise Hill 4* или Coconut Beach 3*, завтраки</li><li>Фаер-шоу на пляже</li></ul><button class=\"btn ghost wide\" data-open=\"Прекрасный Ко Чанг — Стандарт\">Заказать Стандарт</button></div><div class=\"pk hot\"><span class=\"eyebrow\">Премиум</span><div class=\"price\" style=\"font-size:2rem\"><small>за человека</small>{{pe:prem}}</div><ul><li>Всё из пакета «Стандарт»</li><li>Кормление слонов и площадка Kai Bae</li><li>Полный пансион: обед и ужин</li><li>Морской тур по 3 островам: снорклинг, рыбалка, welcome drink</li></ul><button class=\"btn  wide\" data-open=\"Прекрасный Ко Чанг — Премиум\">Заказать Премиум</button></div></div><div class=\"vid\"><video controls playsinline preload=\"none\" poster=\"@@B@@img/kc-poster.webp\"><source src=\"@@B@@video/kochang.mp4\" type=\"video/mp4\"></video><p>Фаер-шоу на пляже — вечер первого дня</p></div></div>\n",
+ "body": [
+  {
+   "t": "html",
+   "x": "<h2>Что входит</h2><div class=\"tbl scroll\" style=\"display:block\"><table><thead><tr><th>Услуга</th><th style=\"text-align:center\">Стандарт</th><th style=\"text-align:center\">Премиум</th></tr></thead><tbody><tr><td>Комфортабельный трансфер с кондиционером</td><td style=\"text-align:center\">✓</td><td style=\"text-align:center\">✓</td></tr><tr><td>Страховка</td><td style=\"text-align:center\">✓</td><td style=\"text-align:center\">✓</td></tr><tr><td>Профессиональный гид (русский язык)</td><td style=\"text-align:center\">✓</td><td style=\"text-align:center\">✓</td></tr><tr><td>Храм San Chao Pho</td><td style=\"text-align:center\">✓</td><td style=\"text-align:center\">✓</td></tr><tr><td>Смотровая площадка Мемориал Адмиралу</td><td style=\"text-align:center\">✓</td><td style=\"text-align:center\">✓</td></tr><tr><td>Слоновья ферма</td><td style=\"text-align:center\">✓</td><td style=\"text-align:center\">✓</td></tr><tr><td>Смотровая площадка Kai Bae</td><td style=\"text-align:center\">—</td><td style=\"text-align:center\">✓</td></tr><tr><td>Кормление слонов</td><td style=\"text-align:center\">—</td><td style=\"text-align:center\">✓</td></tr><tr><td>Отель Paradise Hill Resort 4* + завтрак</td><td style=\"text-align:center\">✓</td><td style=\"text-align:center\">✓</td></tr><tr><td>Отель Coconut Beach Resort 3* + завтрак</td><td style=\"text-align:center\">✓</td><td style=\"text-align:center\">—</td></tr><tr><td>Фаер-шоу на пляже</td><td style=\"text-align:center\">✓</td><td style=\"text-align:center\">✓</td></tr><tr><td>Полный пансион</td><td style=\"text-align:center\">—</td><td style=\"text-align:center\">✓</td></tr><tr><td>Тур по островам на общей лодке</td><td style=\"text-align:center\">—</td><td style=\"text-align:center\">✓</td></tr><tr><td>Снорклинг, рыбалка, welcome drink</td><td style=\"text-align:center\">—</td><td style=\"text-align:center\">✓</td></tr></tbody></table></div>\n<h2>Программа по дням</h2><p style=\"color:var(--muted)\">Время может корректироваться из-за дорожной ситуации и погоды.</p>\n<div class=\"faq\"><details open><summary>Стандарт — день 1</summary><ul class=\"tl\"><li><b>05:30–06:00</b><span>Сбор гостей из отелей Паттайи</span></li><li><b>07:30–08:00</b><span>Остановка на завтрак (ланчбоксы из отеля)</span></li><li><b>10:30–11:00</b><span>Паром на остров Ко Чанг</span></li><li><b>11:00–11:20</b><span>Храм San Chao Pho — здесь хранится «душа острова»</span></li><li><b>11:20–11:35</b><span>Смотровая площадка Мемориал Адмиралу</span></li><li><b>11:40–12:00</b><span>Слоновья ферма; кормление слонов — за свой счёт (в Премиуме включено)</span></li><li><b>12:00–14:00</b><span>Заселение в отель. Свободное время: бассейны, аквапарк, ресторан, спа, детская комната</span></li><li><b>20:00–20:30</b><span>Фаер-шоу на пляже</span></li></ul></details><details><summary>Стандарт — день 2</summary><ul class=\"tl\"><li><b>07:00–10:30</b><span>Завтрак в отеле</span></li><li><b>07:00–12:00</b><span>Свободное время</span></li><li><b>11:30–12:00</b><span>Выселение из отеля</span></li><li><b>12:30–16:30</b><span>Свободное время</span></li><li><b>16:30–17:20</b><span>Сбор гостей у ресепшена, выезд</span></li><li><b>17:40–18:00</b><span>Паром</span></li><li><b>19:00</b><span>Остановка для перекуса</span></li><li><b>22:00</b><span>Возвращение в отели Паттайи</span></li></ul></details><details><summary>Премиум — день 1</summary><ul class=\"tl\"><li><b>05:30–06:00</b><span>Сбор гостей из отелей Паттайи</span></li><li><b>07:30–08:00</b><span>Остановка на завтрак</span></li><li><b>10:30–11:00</b><span>Паром на остров Ко Чанг</span></li><li><b>11:00–11:35</b><span>Храм San Chao Pho и Мемориал Адмиралу</span></li><li><b>11:40–12:00</b><span>Слоновья ферма, кормление слонов</span></li><li><b>12:00</b><span>Обед на берегу моря: тайская кухня, шведский стол</span></li><li><b>13:00–14:00</b><span>Заселение в отель, свободное время</span></li><li><b>19:00</b><span>Ужин (европейская кухня)</span></li><li><b>20:00–20:30</b><span>Фаер-шоу на берегу моря</span></li></ul></details><details><summary>Премиум — день 2</summary><ul class=\"tl\"><li><b>07:00–09:00</b><span>Завтрак и выселение из отеля</span></li><li><b>09:00</b><span>Поездка к рыбацкой деревне</span></li><li><b>10:30</b><span>Морской тур по трём островам: Ко Лао Я, Ко Ваи, Ко Клум — пляж, купание, снорклинг, рыбалка. Обед на корабле</span></li><li><b>16:00</b><span>Возвращение с островов к отелю</span></li><li><b>16:30</b><span>Отправление</span></li><li><b>17:40–18:00</b><span>Паром</span></li><li><b>19:00</b><span>Остановка на перекус</span></li><li><b>22:00</b><span>Возвращение в Паттайю</span></li></ul></details></div>\n<h2>Отели</h2><p><b>Paradise Hill Resort 4*</b> (вторая линия, пакеты Стандарт и Премиум) и <b>Coconut Beach Resort 3*</b> (первая линия, пакет Стандарт). На территории — бассейны, аквапарк, ресторан, спа и детская комната. По запросу — апгрейд на виллы и номера Paradise Resort &amp; Spa 4*.</p>\n<h2>Условия и доплаты</h2><ul><li><b>Доплата за одноместное размещение:</b> +900 ฿.</li><li><b>Дети 1–2,99 года:</b> бесплатно; если нужно место в автобусе — 1 300 ฿.</li><li><b>Дети 3–7,99 года:</b> скидка 50% при двух взрослых и без дополнительной кровати; иначе 20%. <b>3–10,99 года:</b> скидка 20% с дополнительной кроватью.</li><li><b>Апгрейд на месте:</b> «Стандарт → Премиум» +2 100 ฿/чел (до 11:00 первого дня), «+питание» +800 ฿/чел, «+острова» +1 300 ฿/чел (до 18:00).</li><li><b>Дополнительная ночь</b> в отеле: от 1 800 ฿ за номер; перенос даты возврата и апгрейды номеров согласуем заранее.</li></ul><p style=\"color:var(--muted);font-size:.9rem\">Групповые и приватные поездки, бронирования на 2 и более ночи рассчитываем индивидуально.</p>\n<h2>Что взять с собой</h2><ul><li>Оригинал паспорта — обязательно (паром и ночёвка)</li><li>Купальные принадлежности, полотенце, крем от солнца</li><li>Удобная обувь, головной убор</li><li>Наличные на личные расходы</li></ul>"
+  }
+ ],
+ "prices": [
+  {
+   "k": "std",
+   "l": "Стандарт",
+   "v": 3600
+  },
+  {
+   "k": "prem",
+   "l": "Премиум",
+   "v": 5100
+  }
+ ],
+ "book_note": "Цена за человека при двухместном размещении.",
+ "book_select": [
+  "Прекрасный Ко Чанг — Стандарт",
+  "Прекрасный Ко Чанг — Премиум"
+ ],
+ "book_btn": "Заказать тур",
+ "related": [],
+ "card_badge": "Несколько дней",
+ "card_pk": "a",
+ "card_meta": [
+  "Уточняйте",
+  "05:30"
+ ],
+ "meta": "Прекрасный Ко Чанг: Двухдневная поездка из Паттайи на остров Ко Чанг: паром, храм San Chao Pho, смотровая площадка Мемориал Адмиралу, слоновья ферма, отель с бассейном и … Цена от 3 600 ฿. Заявка за 1 минуту.",
+ "ld_desc": "Двухдневная поездка из Паттайи на остров Ко Чанг: паром, храм San Chao Pho, смотровая площадка Мемориал Адмиралу, слоновья ферма, отель с бассейном и фаер-шоу на пляже. В пакете «Премиум» — полный пансион и морской тур по трём островам со снорклингом и рыбалкой.",
+ "row": {
+  "days": "Уточняйте",
+  "time": "05:30",
+  "child": false
+ }
+}
